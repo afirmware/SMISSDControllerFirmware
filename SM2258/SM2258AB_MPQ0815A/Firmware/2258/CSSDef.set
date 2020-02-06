@@ -1,0 +1,32 @@
+///////////////////////////////////////////////////////////////////////////
+//RD USED ONLY
+
+[SHIM]
+HeaderLen=0x10		//Binary offset
+ImageSize=0x1A000	//104k
+Addr=0x40020410
+
+[DRAMSET]
+HeaderLen=0x10		//Binary offset
+ImageSize=0x1C00	//7k
+Addr=0x40080000
+
+[MPISP]
+HeaderLen=0x400		//MISP binary offset
+ImageSize=0x3DB90	//246.xx KB (MPISP+PRET)
+Addr=0x40042410
+MPISPSize=0x1CC90	//115.xx KB
+PRETSize=0x20F00	//131.75 KB
+
+[CID]
+HeaderLen=0x10		//Binary offset
+ImageSize=0x400		//1k
+Addr=0x00
+
+[ISP]
+HeaderLen=0x10		//Binary offset
+ImageSize=0xC0000	//768k
+FWVER=O1013A
+
+//
+///////////////////////////////////////////////////////////////////////////

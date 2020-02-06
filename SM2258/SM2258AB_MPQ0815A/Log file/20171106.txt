@@ -1,0 +1,2 @@
+  No.    Port.        StartTime              EndTime         SerialNumber           Bad Blocks     Pretest   CheckPretest   DL_ISP   CheckISP   CopyCompare   ClearCC   QcCheck   Result  
+000001  000001  2017/11/06 16:20:16   2017/11/06 16:20:51   AA000000000000000072      00000          Pass       Pass         Pass     Pass         ----         ----      ----     51/A0

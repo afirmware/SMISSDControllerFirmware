@@ -1,0 +1,597 @@
+{PatternInfo = SMI SSD v0.2, 2013/10/29}
+; ------------------------------------------------------------------------
+;  Format:
+;     Sync pattern, "Message %Param_1_Format ...... %Param_N_Format",
+;                   Param_1_size ...... Param_N_size, Action
+;
+;     %T is reserved as Timer and is not count as Param
+;     Param_x_size can be assigned for first few parameters only(default 1)
+;
+;     Action: math expression
+;             T reserved as timer variable
+;             %1 means Param1, %2 means Param2...
+; ------------------------------------------------------------------------
+
+
+;================================================================================
+; Sync pattern ( nk kn xx, ) or ( nk kn xx yy, )
+; n : A ~ F
+; K : 1 ~ 9
+;
+; pattern 3 ( nk kn xx, )
+; SN : xx ( 00 ~ 7F )
+;
+; pattern 4	( nk kn xx yy, )
+; SN : xx ( 00 ~ 7F )
+; SN : yy ( 00 ~ 7F )
+;================================================================================
+
+;=======================  garbage collection ====================================
+{SetMsgColor = BLUE}
+;80 01 00,  "    GC        (0x%08X ms),SwapDataBlock() start, PickForceMode, gEnBGClean=0x%02X , g16TotalSpareCnt+g16EmptyBlockCnt = 0x%02X", 4 1 2
+;80 01 04,  "    GC        (0x%08X ms),SwapDataBlock() start, PickActiveMode, gEnBGClean=0x%02X , g16TotalSpareCnt+g16EmptyBlockCnt = 0x%02X", 4 1 2
+;80 01 08,  "    GC        (0x%08X ms),SwapDataBlock() start, PickZeroErCnt, gEnBGClean=0x%02X , g16TotalSpareCnt+g16EmptyBlockCnt = 0x%02X", 4 1 2
+;80 01 0C,  "    GC        (0x%08X ms),SwapDataBlock() start, PickMinValid, gEnBGClean=0x%02X , g16TotalSpareCnt+g16EmptyBlockCnt = 0x%02X", 4 1 2
+;80 01 10,  "    GC        (0x%08X ms),SwapDataBlock() start, PickHeadBlock, gEnBGClean=0x%02X , g16TotalSpareCnt+g16EmptyBlockCnt = 0x%02X", 4 1 2
+;80 01 14,  "    GC        (0x%08X ms),SwapDataBlock() start, PickErrBlock, gEnBGClean=0x%02X , g16TotalSpareCnt+g16EmptyBlockCnt = 0x%02X", 4 1 2
+;80 01 18,  "    GC        (0x%08X ms),SwapDataBlock() start, PickTail, gEnBGClean=0x%02X , g16TotalSpareCnt+g16EmptyBlockCnt = 0x%02X", 4 1 2
+80 01,  "    GC        (0x%08X ms),SwapDataBlock() start, WearType=0x%02X, gEnBGClean=0x%02X , Spare+Empty = 0x%04X", 4 1 1 2
+80 03, 	"    GC        (0x%08X ms),FindNextCandidate() start u8PickMode = 0x%02X, u8First = 0x%02X",4 1 1
+80 04, 	"    GC        (0x%08X ms),FindNextCandidate() end u16FoundFBlock = %04X, g32arValidFPageCnt= 0x%04X",4 2 4
+80 09, 	"    GC        (0x%08X ms),Finish Partial Move  u16FoundFBlock = %04X",4
+80 0B, 	"    GC        (0x%08X ms),ContinueSwap()",4
+80 0C, 	"    GC        (0x%08X ms),FinishCleanCache(), g16CleanGHPCnt= 0x%02X",4 2
+80 0D, 	"    GC        (0x%08X ms),FinishPickErrBlock()",4
+80 0E,  "    GC        (0x%08X ms),ReleaseAllCleanList()",4
+80 0F, 	"    GC        (0x%08X ms),SetupProtectPage()",4
+80 10, 	"    GC        (0x%08X ms),ProgFinishPage() start",4
+80 11, 	"    GC        (0x%08X ms),ProgFinishPage() end",4
+80 12,  "    GC        (0x%08X ms),SwapActiveBlock() start",4
+80 13, 	"    GC        (0x%08X ms),SwapActiveBlock() end",4
+80 14, 	"    GC        (0x%08X ms),DecAllWLCnt(),u8Offset=0x%02X start",4 2
+80 15, 	"    GC        (0x%08X ms),DecAllWLCnt() end u8MaxEraseCnt = 0x%02X",4 2
+80 16, 	"    GC        (0x%08X ms),WearLeveling() start ",4
+;80 17 00 00, 	"    GC        (0x%08X ms),WearLeveling() end WearWProBlock,  WearWProBockCnt = 0x%02X, g32WearLevelingCnt=0x%08x",4 2 4
+;80 17 00 01, 	"    GC        (0x%08X ms),WearLeveling() end WearMapBlock,   WearMapBlockCnt = 0x%02X, g32WearLevelingCnt=0x%08x",4 2 4
+;80 17 00 02, 	"    GC        (0x%08X ms),WearLeveling() end WearLinkBlock,  WearLinkBlock = 0x%02X, g32WearLevelingCnt=0x%08x",4 2 4
+;80 17 00 03, 	"    GC        (0x%08X ms),WearLeveling() end WearAct0Block,  WearAct0BlockCnt = 0x%02X, g32WearLevelingCnt=0x%08x",4 2 4
+;80 17 00 04, 	"    GC        (0x%08X ms),WearLeveling() end WearDataBlock,  WearDataBlock = 0x%02X, g32WearLevelingCnt=0x%08x",4 2 4
+;80 17 00 05, 	"    GC        (0x%08X ms),WearLeveling() end WearCleanBlock, WearCleanBlock = 0x%02X, g32WearLevelingCnt=0x%08x",4 2 4
+;80 17 00 06, 	"    GC        (0x%08X ms),WearLeveling() end WearEmptyMapBlock, WearEmptyMapBlock = 0x%02X, g32WearLevelingCnt=0x%08x",4 2 4
+80 17, 	"    GC        (0x%08X ms),WearLeveling() end WearType=0x%02X,  WearWProBockCnt = 0x%02X, g32WearLevelingCnt=0x%08x",4 2 2 4
+80 18,  "    GC        (0x%08X ms),InitCandidateSetting, u8PickMode = 0x%02X ",4 2
+80 50, 	"    GC        (0x%08X ms),SwapDataBlock, g32arValidFPageCnt[u16SrcBlock]=0",4
+80 51, 	"    GC        (0x%08X ms),SwapDataBlock, g32arValidFPageCnt[u16SrcBlock]!=0",4
+80 52, 	"    GC        (0x%08X ms),SwapDataBlock, Generate new active block",4
+80 55, 	"    GC        (0x%08X ms),SwapDataBlock, No Clean Src Block",4
+
+;=======================      FTL      ====================================
+{SetMsgColor = GREEN}
+81 00,    "ASSERT LOG: FTL       (0x%08X ms),VU command trigger save log",4
+81 15,    "      FTL       (0x%08X ms),SaveMapGroup() Start. SaveMapID=0x%02X",4 2
+81 16,    "      FTL       (0x%08X ms),SaveMapGroup() End",4
+81 17,    "      FTL       (0x%08X ms),SaveMapToFlash() Start. ZoneIdx=0x%02X",4 2
+81 18,    "      FTL       (0x%08X ms),SaveMapToFlash() End",4
+81 19,    "      FTL       (0x%08X ms),SaveG2FMap() Start",4
+81 1A,    "      FTL       (0x%08X ms),SaveG2FMap() End",4 
+81 1B,    "      FTL       (0x%08X ms),SaveIndexInfo() Start",4
+81 1C,    "      FTL       (0x%08X ms),SaveIndexInfo() End",4
+81 1D,    "      FTL       (0x%08X ms),SaveBlockLinkTable() Start SaveLinkID=0x%02X",4 2
+81 1E,    "      FTL       (0x%08X ms),SaveBlockLinkTable() End",4
+81 1F,    "      FTL       (0x%08X ms),SaveWProPage() Start, PageIdx=0x%02X",4 2
+81 20,    "      FTL       (0x%08X ms),SaveWProPage() End ",4
+81 21,    "      FTL       (0x%08X ms),MoveWProBlock() Start, New WPROBloc = 0x%04X ",4 2
+81 22,    "      FTL       (0x%08X ms),MoveWProBlock() End ",4
+81 23,    "      FTL       (0x%08X ms),Erase old WPRO block = 0x%04X ",4 2
+81 24,    "      FTL       (0x%08X ms),ChkEraseEmptyMapBlock() Start",4
+81 25,    "      FTL       (0x%08X ms),ChkEraseEmptyMapBlock() End",4
+81 26,    "      FTL       (0x%08X ms),GenNextMapFBlock() Start. ZoneIdx=0x%02X",4 2 
+81 27,    "      FTL       (0x%08X ms),GenNextMapFBlock() End. NewMapFBlock=0x%02X",4 2 
+81 28,    "      FTL       (0x%08X ms),SaveValidFPageCnt() Start",4
+81 29,    "      FTL       (0x%08X ms),SaveValidFPageCnt() End",4
+81 35,    "      FTL       (0x%08X ms),HandleErrBlock() ===> FindSerial",4
+81 45,    "      FTL       (0x%08X ms),SaveIndexInfo() ===> Change IndexBlock",4 
+81 4A,    "      FTL       (0x%08X ms),GenNextActiveFBlock()  g16ActiveFBlock=0x%04X,ActMode=0x%02X,u8GenNew=0x%02X",4 2 1 1 
+81 55,    "      FTL       (0x%08X ms),EraseAllEmptyBlock()  gEccFailBlockCnt=0x%02X,g16EmptyBlockCnt=0x%02X",4 2 2
+81 56,    "      FTL       (0x%08X ms),GenNextTailFBlock()",4
+81 57,    "      FTL       (0x%08X ms),SaveEOBInfo() g16TailFBlock=0x%02X",4 2
+81 62,		"			 FTL			 (0x%08X ms),ECCFail Block=0x%04X, Page=0x%04X,DesCe=0x%03X, ErrCnt=0x%04X",4 2 2 2 2
+81 7D,    "      FTL       (0x%08X ms),RwCmdQueueService()  Start",4
+81 7E,    "      FTL       (0x%08X ms),RwCmdQueueService()  End",4
+81 7F,    "      FTL       (0x%08X ms),SaveIndexInfo() ===> ECCFail",4
+81 80,    "ASSERT HANG: FTL       (0x%08X ms), ===> Firmware Logic Hang,u32ErrID=%X",4 4
+81 A2,		"			 FTL			 (0x%08X ms),DoECCFailRetry(Retry OK)",4
+81 A3,		"			 FTL			 (0x%08X ms),DoECCFailRetry(Retry Fail)",4
+81 A7,		"			 FTL			 (0x%08X ms),DoRAIDDecode(Active Block Fail and Unfinished Encode RAID)",4
+81 A8,		"			 FTL			 (0x%08X ms),DoRAIDDecode(RunTime swap active block fail & unfinish encode)",4
+81 A9,		"			 FTL			 (0x%08X ms),DoRAIDDecode(RAID ChEccFail)",4
+81 AB,		"			 FTL			 (0x%08X ms),DoRAIDDecode(RAID Fail)",4
+81 AC,		"			 FTL			 (0x%08X ms),DoRAIDDecode(RAID Pass)",4
+81 B4,		"			 FTL			 (0x%08X ms),DoECCFailRetry(Retry OK), Ch=0x%03X,Ce=0x%03X,Block==0x%04X",4 2 2 2
+81 B5,		"			 FTL			 (0x%08X ms),DoECCFailRetry(Retry Fail), Ch=0x%03X,Ce=0x%03X,Block==0x%04X",4 2 2 2
+
+;=======================  ECC Retry & Soft Decode ====================================
+{SetMsgColor = RED}
+
+82 02,    "      NandHandle(0x%08X ms),Block ReCombine",4
+82 03,    "      NandHandle(0x%08X ms),Block MarkBad!",4
+82 04,    "      NandHandle(0x%08X ms),ChkBackUpPage() Error. u16BKPage=0x%02X, g16MaxChunkErrCnt=0x%02X, ((R8_FCTRL[O8_LDPCECCerrCnt_H]<<8)|R8_FCTRL[O8_LDPCECCerrCnt_L])=0x%02X",4 2 2 2
+82 21,    "      NandHandle(0x%08X ms),SetErrBlock() u16FBlock = 0x%02X,ID=0x%02X,g16ErrorBlock1=0x%02X!!",4 2 2 2
+82 22,    "      NandHandle(0x%08X ms),SetPFInfo() u8PFID = 0x%02X,u16PFInfo=0x%02X,gPFInfoIdx=0x%02X!!",4 2 2 2
+82 23,    "      NandHandle(0x%08X ms),AddPowerOnFailBlock() u16Block = 0x%02X,u8ECCFailSrc=0x%02X,u8EccErrCnt=0x%02X,gEccFailBlockCnt=0x%02X!!",4 2 2 2 2
+82 31,    "      NandHandle(0x%08X ms),ChkBlockRestECCFail() ===> BackupDRAM_0",4 
+82 32,    "      NandHandle(0x%08X ms),ChkBlockRestECCFail() ===> BackupDRAM_1",4 
+82 51,    "      NandHandle(0x%08X ms),ECCFailHandler()  Start",4 
+82 52,    "      NandHandle(0x%08X ms),ECCFailHandler()  END",4
+82 54,    "      NandHandle(0x%08X ms),ECCFailHandler2()  END",4
+82 5D,    "      NandHandle(0x%08X ms),SetECCFailInfo() u16ECCFailBlock=0x%02X, u8ECCFailSrc=0x%02X, u8MaxErrCnt=0x%02X",4 2 2 2
+82 5E,    "      NandHandle(0x%08X ms),u16ECCFailBlock need to record to ECC fail info table.",4
+82 5F,    "      NandHandle(0x%08X ms),u16ECCFailBlock already exist ECC fail info table.",4
+82 60,    "      NandHandle(0x%08X ms),gp_EccFailInfo->g32ECCFailFlashStatus[gIntlvOddA])=0x%08X,g16ECCFailBlock=0x%02X,g16ECCFail1stPage=0x%02X",4 4 2 2
+82 61,    "      NandHandle(0x%08X ms),gECCFailPageCnt=0x%02X,gECCFailSrc=0x%02X,g16ECCFailDesBlock=0x%02X,gECCErrCnt=0x%02X",4 2 2 2 2
+82 73,		"ASSERT LOG: NandHandle(0x%08X ms),Read ECC Fail!!",4 
+82 74,		"ASSERT LOG: NandHandle(0x%08X ms),Program Fail!!",4
+82 75,		"ASSERT LOG: NandHandle(0x%08X ms),Erase Fail!!",4
+82 7B,    "      NandHandle(0x%08X ms),MarkBadBlock() Start. ErrFBlock=0x%02X",4 2
+82 7C,    "ASSERT LOG: NandHandle(0x%08X ms),MarkBadBlock() End. NewFBlock=0x%02X",4 2
+82 7D,    "      NandHandle(0x%08X ms),in partial read, uncorrectable LBA=0x%08X",4 4
+82 7E,    "      NandHandle(0x%08X ms),in eviction, uncorrectable LBA=0x%08X",4 4
+82 7F,    "      NandHandle(0x%08X ms),Act0 Backup DRAM gp32arCacheGHP[0x%04X] =0x%08X",4 2 4
+82 80,    "      NandHandle(0x%08X ms),Hit Act0 Backup DRAM gp32arCacheGHP[0x%04X] =0x%08X",4 2 4
+82 81,    "      DramECC (0x%08X ms),CPU DramECC %x Bit error Addr=0x%04X",4 2 4
+82 82,    "      DramECC (0x%08X ms),DMA DramECC %x Bit error Addr=0x%04X",4 2 4
+82 83,    "      CheckInfoBlock ECC Fail gSysOption:%x",4 2 
+;=======================  Build link table ====================================
+{SetMsgColor = BLACK}
+83 01,    "      BuildLink(0x%08X ms),ReadLinkTable() Start",4 
+83 03,    "      BuildLink(0x%08X ms),ReadIndexBlockInfo() Start",4 
+83 04,    "      BuildLink(0x%08X ms),ReadIndexBlockInfo() End",4 
+83 05,    "      BuildLink(0x%08X ms),MapErrHandle===>Erase all map block",4
+83 06,    "      BuildLink(0x%08X ms),ChkSaveLinkAndMap() ===> Miss all map info",4
+83 07,    "      BuildLink(0x%08X ms),ChkDataBlock() ===> DataEOBFail",4
+83 08,    "      BuildLink(0x%08X ms),ChkDataBlock() ===> BuildF2HMapInfo Fail",4
+83 09,    "      BuildLink(0x%08X ms),ReadIndexBlockInfo() ===> IndexEndPageFail",4
+83 0A,    "      BuildLink(0x%08X ms),ReadIndexBlockInfo() ===> IndexRestFail",4
+83 0B,    "      BuildLink(0x%08X ms),JudgeActiveBlock() Start",4
+83 0C,    "      BuildLink(0x%08X ms),JudgeActiveBlock() End. ActiveFBlock[0]=0x%02X",4 2
+83 0D,    "      BuildLink(0x%08X ms),BuildBlockLinkInfo() ===> LinkDataFail",4
+83 0E,    "      BuildLink(0x%08X ms),Check Unfull Data Block End",4
+83 0F,    "      BuildLink(0x%08X ms),ChkDataBlock() Start. TotalDataBlock=0x%02X, FailReturn=0x%02X",4 2 2
+83 10,    "      BuildLink(0x%08X ms),ChkDataBlock() End",4
+83 11,    "      BuildLink(0x%08X ms),RebuildAllMap() Start. PartialReBuild=0x%02X",4 2
+83 12,    "      BuildLink(0x%08X ms),RebuildAllMap() End",4
+83 13,    "      BuildLink(0x%08X ms),JudgeWproPage() ===> ECCFail",4
+83 14,    "      BuildLink(0x%08X ms),JudgeWproPage() ===> WProSprFail",4
+83 15,    "      BuildLink(0x%08X ms),JudgeWproPage() ===> WProRest/DataFail",4
+83 17,    "      BuildLink(0x%08X ms),ChkF2HAndH2F() ===> F2HMismatchH2F. ActMode=0x%02X, FBlock=0x%02X",4 2 2 
+83 18,    "      BuildLink(0x%08X ms),GHP=0x%02X0x%02X, F2HMap=0x%02X0x%02X",4 2 2 2 2
+83 19,    "      BuildLink(0x%08X ms),H2FPage=0x%02X",4 2
+83 1A,    "      BuildLink(0x%08X ms),ChkF2HAndH2F() Fail",4
+83 1B,    "      BuildLink(0x%08X ms),LoadMapInfo() ===> LoadMapFail",4
+83 1D,    "      BuildLink(0x%08X ms),BuildDevH2FTable() G2F Error u8EccFail=0x%02X, (R8_FCTRSpr[0] &0x0F)=0x%02X, R8_FCTRSpr[8]=0x%02X, gRestG2F=0x%02X.",4 2 2 2 2
+83 1E,    "      BuildLink(0x%08X ms),gIndexBlockIndex =0x%02X",4 2
+83 1F,    "      BuildLink(0x%08X ms),JudgeActiveBlock() ===> ExtraActiveBlock Exist",4
+83 20,    "      BuildLink(0x%08X ms),JudgeActiveBlock() ===> ActiveBlock Exist",4
+83 21,    "      BuildLink(0x%08X ms),PickCorrectWpro() Start",4
+83 22,    "      BuildLink(0x%08X ms),PickCorrectWpro() End. WPROBlock=0x%02X",4 2
+83 23,    "      BuildLink(0x%08X ms),ChkWproBlock() ===> WPROBlocks exist",4
+83 2A,    "      BuildLink(0x%08X ms),ChkFastBootInfo().gFastBoot=0x%02X",4 2
+83 2B,    "      BuildLink(0x%08X ms),ChkFastBootInfo().u16LastPage=0x%02X,g16LastMapSavedActivePagePtr=0x%02X mismatch,Check Result NG",4 2 2
+83 2C,    "      BuildLink(0x%08X ms),BuildDevH2FTable().g32LBA=0x%08X,g32HostXfrCnt=0x%08X",4 4 4
+83 2D,    "      BuildLink(0x%08X ms),BuildDevH2FTable().u32GroupIdx1=0x%08X,u32GroupIdx2=0x%08X",4 4 4
+83 2E,    "      BuildLink(0x%08X ms),BuildDevH2FTable().u8ZoneIdx1=0x%02X,u8ZoneIdx2=0x%02X",4 2 2
+83 33,    "      BuildLink(0x%08X ms),Read Index Block Information ===> Need to change IndexBlock",4
+83 34,    "      BuildLink(0x%08X ms),Build Block Link Information ===> Need to change Link Block",4  
+83 35,    "      BuildLink(0x%08X ms),HandleErrBlock() ===> FindSerial",4
+83 36,    "      BuildLink(0x%08X ms),LoadMapInfo() ===> Need to change LinkBlock",4
+83 37,    "      BuildLink(0x%08X ms),MapInfoBlock: LastMapSavedTailFBlock=0x%02X, LastMapSavedActiveFBlock=0x%02X, g16LastMapSavedActivePagePtr=0x%02X",4 2 2 2
+83 38,    "      BuildLink(0x%08X ms),DataBlockCnt=0x%02X",4 2
+83 39,    "      BuildLink(0x%08X ms),ActiveFBlock[gActMode]=0x%02X, ExtraActiveFBlock[gActMode]=0x%02X",4 2 2
+83 3A,    "      BuildLink(0x%08X ms),ActiveFBlock[0]=0x%02X,ActiveFBlock[1]=0x%02X",4 2 2 
+83 3C,    "      BuildLink(0x%08X ms),ExtraActiveBlock[0]=0x%02X,ExtraActiveBlock[1]=0x%02X",4 2 2
+83 3E,    "      BuildLink(0x%08X ms),ReadIndexBlockInfo() ===> Select IndexBlock",4 
+83 3F,    "      BuildLink(0x%08X ms),ReadIndexBlockInfo() ===> IndexBlock Exist",4 
+83 40,    "      BuildLink(0x%08X ms),WPROBlock=0x%02X",4 2 
+83 41,    "      BuildLink(0x%08X ms),WPROBlock Exist",4 
+83 42,    "      BuildLink(0x%08X ms),LinkBlock Exist",4 
+83 43,    "      BuildLink(0x%08X ms),ChkEraseUnitState() ===> LoadEC_0",4 
+83 46,    "      BuildLink(0x%08X ms),HeadFBlock=0x%02X, TailFBlock=0x%02X",4 2 2
+83 48,    "      BuildLink(0x%08X ms),ReBuildActF2HMap() Start u16ActiveBlk=0x%02X,u8BackupDRAM=0x%02X",4 2 2 
+83 49,    "      BuildLink(0x%08X ms),ChkF2HAndH2F()   u16FBlock=0x%02X, g32arValidFPageCnt[u16FBlock]=0x%08X",4 2 4
+83 4B,    "      BuildLink(0x%08X ms),ResetSpareValidPageCnt()     Start",4
+83 4C,    "      BuildLink(0x%08X ms),ResetSpareValidPageCnt()     END",4
+83 4D,    "      BuildLink(0x%08X ms),RemoveVP0Block()     Start",4
+83 4E,    "      BuildLink(0x%08X ms),RemoveVP0Block()     END",4
+83 4F,    "      BuildLink(0x%08X ms),ChkSaveLinkAndMap()  Start",4
+83 50,    "      BuildLink(0x%08X ms),ChkSaveLinkAndMap()  END",4
+83 58,    "      BuildLink(0x%08X ms),BuildDevH2FTable().Build Group of H2F Fail",4
+83 59,    "      BuildLink(0x%08X ms),IndexBlockInfo: IndexBlock=0x%02X, LinkBlock=0x%02X, WPROBlock=0x%02X, MapInfoFBlock=0x%02X",4 2 2 2 2
+83 5B,    "      BuildLink(0x%08X ms),HandleErrBlock() Erase GC Block, u16FBlock=0x%02X,Push Spare Block.",4 2
+83 5C,    "      BuildLink(0x%08X ms),HandleErrBlock() InsertUnfullDataBlock u16FBlock=0x%02X",4 2
+83 6F,    "      BuildLink(0x%08X ms),ChkLogBlock() start",4 
+83 70,    "      BuildLink(0x%08X ms),ChkLogBlock() end",4 
+83 71,    "ASSERT LOG: BuildLink(0x%08X ms),ReadLinkTable() End.  Safe shutdown: BootTime=0x%08X ms",4 4 
+83 72,    "ASSERT LOG: BuildLink(0x%08X ms),ReadLinkTable() End.  Unsafe shutdown BootTime=0x%08X",4 4
+83 73,    "      BuildLink(0x%08X ms),BuildBlockLinkPrevTable() ===> PrevBlock MarkBad",4
+83 74,    "      BuildLink(0x%08X ms),BuildBlockLinkInfo() ===> Error LinkBlock",4
+83 75,    "      BuildLink(0x%08X ms),ScanFBlock() ===> Block read EOB Fail. NowFBlock=0x%02X",4 2
+83 76,    "      BuildLink(0x%08X ms),ScanFBlock() ===> Is LinkBlock!. NowFBlock=0x%02X",4 2
+83 77,    "      BuildLink(0x%08X ms),BuildBlockLinkInfo() Start",4 
+83 78,    "      BuildLink(0x%08X ms),BuildBlockLinkInfo() End gFastBoot =0x%02X",4 2 
+83 79,    "      BuildLink(0x%08X ms),ChkUnfullDataBlock() Start",4
+83 7A,    "      BuildLink(0x%08X ms),ChkUnfullDataBlock() End",4
+83 7B,    "      BuildLink(0x%08X ms),ScanFBlock() Start",4
+83 7C,    "      BuildLink(0x%08X ms),ScanFBlock() End",4
+83 7D,    "      BuildLink(0x%08X ms),BuildH2FTable() Start. ZoneIdx=0x%02X",4 2
+83 7E,    "      BuildLink(0x%08X ms),BuildH2FTable() End",4
+83 7F,    "      BuildLink(0x%08X ms),LoadMapInfo() Start",4 
+83 80,    "      BuildLink(0x%08X ms),LoadMapInfo() End",4
+83 81,    "      BuildLink(0x%08X ms),Power On to ISP takes %d ms",4 4
+83 82,    "      BuildLink(0x%08X ms),ChkSysBlockECC, Info, takes %d ms",4 4
+83 83,    "      BuildLink(0x%08X ms),ChkSysBlockECC, ISP, takes %d ms",4 4
+83 84,    "      BuildLink(0x%08X ms),ChkInfoBlock gSysOption:%x",4 2
+;=======================  Host ====================================
+{SetMsgColor = PURPLE}
+84 00,    "      Host      (0x%08X ms),PCIe reset - p11(ISR), Link State=0x%02X",4 2
+84 01,    "      Host      (0x%08X ms),NVMe NSSR(ISR), Link State=0x%02X",4 2
+84 02,    "      Host      (0x%08X ms),NVMe Reset(ISR), Link State=0x%02X",4 2
+84 03,    "      Host      (0x%08X ms),NVMe EN (cc_en on)(ISR), Link State=0x%02X",4 2
+84 04,    "      Host      (0x%08X ms),NVMe Shut Down Notification(ISR), Link State=0x%02X",4 2
+84 05,    "      Host      (0x%08X ms),PCIe link down(ISR), Link State=0x%02X",4 2
+84 06,    "      Host      (0x%08X ms),Link PreDectect, Link State=0x%02X",4 2
+84 07,    "      Host      (0x%08X ms),Link PreDectect without PCIe Reset, Link State=0x%02X",4 2
+84 08,    "ASSERT LOG: Host      (0x%08X ms),PCIe Init, Link State=0x%02X",4 2
+84 09,    "ASSERT LOG: Host      (0x%08X ms),NVMe Flush Cmd",4
+84 0A,    "      Host      (0x%08X ms),Transit to L0, Link State=0x%02X",4 2
+84 0B,    "      Host      (0x%08X ms),NVMe reset done, Link State=0x%02X",4 2
+84 0C,    "      Host      (0x%08X ms),Shutdown complete, Link State=0x%02X",4 2
+84 0D,    "      Host      (0x%08X ms),NVMe EN (set cc_rdy), Link State=0x%02X",4 2
+84 0E,    "      Host      (0x%08X ms),PowerOn Link PreDectect, Link State=0x%02X",4 2
+84 0F,    "      Host      (0x%08X ms),PowerOn Link PreDectect without PCIe Reset, Link State=0x%02X",4 2
+84 10,    "ASSERT LOG: Host      (0x%08X ms),CmdInfoErr OP=0x%04X, StatusCode=0x%04X",4 2 2
+84 11,    "      Host      (0x%08X ms),CmdPRPErr CmdTpye=0x%04X, ErrorCode=0x%04X",4 2 2
+84 12,    "      Host      (0x%08X ms),PRP1 HiDWORD=0x%08X, LoDWORD=0x%08X",4 4 4
+84 13,    "ASSERT LOG: Host      (0x%08X ms),PRP2 HiDWORD=0x%08X, LoDWORD=0x%08X",4 4 4
+84 14,    "      Host      (0x%08X ms),PeekPoke Enable",4 
+84 15,    "      Host      (0x%08X ms),PeekPoke Disable",4 
+84 16,    "ASSERT LOG: Host      (0x%08X ms),PeekPoke Interrupt by Admin",4 
+84 17,    "ASSERT LOG: Host      (0x%08X ms),PeekPoke Interrupt by IO",4 
+84 18,    "ASSERT LOG: Host      (0x%08X ms),Unsupport Admin command, OP=0x%04X",4 2
+84 19,    "ASSERT LOG: Host      (0x%08X ms),Unsupport IO command, OP=0x%04X",4 2
+84 1A,    "ASSERT LOG: Host      (0x%08X ms),Device active reset",4 
+84 1B,    "ASSERT LOG: Host      (0x%08X ms),ReturnFailStatus(), Status Code=0x%04X",4 2
+84 1C,    "      Host      (0x%08X ms),Trim start ",4
+84 1D,    "      Host      (0x%08X ms),Trim End ",4
+84 1E,    "      Host      (0x%08X ms),Write zeros start ",4
+84 1F,    "      Host      (0x%08X ms),Write UNC  start ",4
+84 20,    "      Host      (0x%08X ms),Set Feature ID = 0x%X, SV=0x%X, DW11=0x%X",4 2 2 4
+84 21,    "      Host      (0x%08X ms),Get Feature ID = 0x%02X, SEL=0x%02X ",4 2 2
+84 22,    "ASSERT LOG: Host      (0x%08X ms),PHY setting readback error, Addr=0x%04X, ExpVal=0x%02X, ActVal=0x%02X ",4 2 1 1
+84 23,    "      Host      (0x%08X ms),Get Emulation, Link State=0x%02X, BAR0 = 0x%08X ",4 2 4
+84 24,    "      Host      (0x%08X ms),DPHY setting start",4
+84 25,    "      Host      (0x%08X ms),DPHY setting readback start",4
+84 26,    "      Host      (0x%08X ms),APHY setting start",4
+84 27,    "      Host      (0x%08X ms),APHY setting readback start",4
+84 28,    "      Host      (0x%08X ms),All PHY setting finish",4
+84 29,    "      Host      (0x%08X ms),Get Perst# assert",4
+84 2A,    "ASSERT LOG:  Host      (0x%08X ms),Read command uncorrectable, LBA=0x%08X, sec=0x%04X",4 4 2   
+84 2B,    "      Host      (0x%08X ms),DPHY src2(ISR), Link State=0x%02X",4 2   
+84 2C,    "      Host      (0x%08X ms),DPHY src3(ISR), Link State=0x%02X",4 2   
+84 2D,    "      Host      (0x%08X ms),Error Complete, SF=0x%04X, CID=0x%04X, SQID=0x%04X",4 2 2 2   
+84 2E,    "ASSERT LOG:  Host      (0x%08X ms),Error Complete, IP info, CQID=0x%04X, Cmd Type=0x%04X",4 2 2  
+84 2F,    "      Host      (0x%08X ms),DPHY src0(ISR), Link State=0x%02X",4 2
+84 30,    "      Host      (0x%08X ms),DPHY src1(ISR), Link State=0x%02X",4 2
+84 31,    "      Host      (0x%08X ms),NVMe Shut Down Notification(ISR), Link State=0x%02X",4 2
+84 37,    "      Host      (0x%08X ms),HW_ChkFWRQ(Run Robin), M_NVMe_SQID=0x%X, M_NVMe_CID=0x%X, M_NVMe_Opcode=0x%02X ",4 2 2 2
+84 39,    "      Host      (0x%08X ms),Gen3 Cfig",4
+84 3A,    "      Host      (0x%08X ms),Start DST Process, Start Time=0x%08X",4 4
+84 3B,    "      Host      (0x%08X ms),Abort DST Process, STC=0x%02X",4 2 
+84 3C,    "      Host      (0x%08X ms),Complete DST Segment %d",4 2
+84 3D,    "      Host      (0x%08X ms),Complete DST Process, FailMap=0x%02X, Process Period=0x%08X",4 2 4
+84 3E,    "      Host      (0x%08X ms),DST Media Check Error, UNCCnt=0x%02X, LBA=0x%08X",4 2 4
+84 3F,    "      Host      (0x%08X ms),DST Command, STC=0x%02X",4 2
+84 40,    "      Host      (0x%08X ms),Gen3 Cfig, Chk_rcvd_TS2=0x%02X,DetectLinkState=0x%X,Chk_TS_with_PAD=0x%X,Breakwaitcount=0x%X",4 2 2 2 2
+84 41,    "      Host      (0x%08X ms),Gen3 Cfig, Chk_rcvd_TS2=0x%02X,DetectLinkState=0x%X,Breakwaitcount=0x%X,waitcount=0x%X",4 2 2 2 2
+84 4A,    "      Host      (0x%08X ms),DST interrupted by Controller Level Reset, STC=0x%2X",4 2
+84 4B,    "      Host      (0x%08X ms),DST interrupted by FormatNVM, STC=0x%2X",4 2
+84 50,    "      Host      (0x%08X ms),Reset SMART and NVME",4
+;=======================  Power state ====================================
+{SetMsgColor = PURPLE}
+85 01,    "      PowerState(0x%08X ms), Enter NVMe PS3, g64PowerOnPS3Cnt=0x%08X, DeassertClkReq#=%d",4 4 2     
+85 02,    "      PowerState(0x%08X ms), Enter NVMe PS4, g64PowerOnPS4Cnt=0x%08X,g32PowerOnAbortPS4Cnt=0x%8X",4 4 4   
+85 04,    "      PowerState(0x%08X ms), Resume from NVMe PS3, CurPS=0x%02X",4 2  
+85 05,    "      PowerState(0x%08X ms), Boot from NVMe PS4",4  
+85 06,    "      PowerState(0x%08X ms), Host set feature - Power state=0x%X, Curr. State=0x%X",4 2 2
+85 07,    "      PowerState(0x%08X ms), Resetting from NVMe PS3",4  
+85 0A,    "      PowerState(0x%08X ms), Enter PCIe L1.2",4  
+85 0F,    "      PowerState(0x%08X ms), Enter PCIe L1.2 in PS3 flow",4
+85 10,    "      PowerState(0x%08X ms), busy: Admin CQ Head(0x04X) != Tail(0x04X), M_Get_CQ_HDBL(0)=0x%08X, M_Get_2260_CQ_TDBL(0)=0x%04X",4 2 2 
+85 11,    "      PowerState(0x%08X ms), busy: Get new cmd",4
+85 12,    "      PowerState(0x%08X ms), busy: NVMe reset",4
+85 13,    "      PowerState(0x%08X ms), busy: NVMe shutdown",4
+85 14,    "      PowerState(0x%08X ms), busy: PCIe link down",4
+85 15,    "      PowerState(0x%08X ms), busy: PCIe reset - p11",4
+85 19,    "      PowerState(0x%08X ms), APST-PS 0x%02X to PS 0x%02X, idle time 0x%04X",4 2 2 4
+85 1A,    "      PowerState(0x%08X ms), busy: LTSSMIntr_0",4
+85 1B,    "      PowerState(0x%08X ms), busy: LTSSMIntr_1",4
+85 1C,    "      PowerState(0x%08X ms), busy: LTSSMIntr_2",4
+85 1D,    "      PowerState(0x%08X ms), busy: Pending AER",4
+85 22,    "      PowerState(0x%08X ms), Abort PS4,PowerOnPS4Cnt=%d,PowerOnAbortPS4Cnt=%d",4 4 4
+85 23,    "      PowerState(0x%08X ms), Abort PS3,PowerOnPS3Cnt=%d,PowerOnAbortPS3Cnt=%d",4 4 4
+85 24,    "      PowerState(0x%08X ms), Abort PS3/PS4,Current PS=%d,ChkLinkCurState=%d",4 1 1
+85 25,    "      PowerState(0x%08X ms), Abort PS3 before shutdown flow,PowerOnPS3Cnt=%d,PowerOnEarlyAbortPS3Cnt=%d",4 4 4
+85 26,    "      PowerState(0x%08X ms), Abort PS4 before shutdown flow,PowerOnPS4Cnt=%d,PowerOnEarlyAbortPS4Cnt=%d",4 4 4
+85 31,    "      PowerState(0x%08X ms), L1 time out,M_CHK_ClkReq_Deassert=%d",4 2
+85 32,    "      PowerState(0x%08X ms), Try to enter L1.2",4
+85 33,    "      PowerState(0x%08X ms), Check PCIe register,M_CHK_ClkReq_Deassert IsNonZero=0x0%X,M_ChkHostEnL1 IsNonZero=0x%X,M_ChkHostEnL0s IsNonZero=0x0%X",4 2 2 2
+85 34,    "      PowerState(0x%08X ms), Check PCIe register,M_ChkSupportClkPowerState IsNonZero=0x%X,M_ChkHostEnClkPowerState IsNonZero=0x%X",4 2 2
+85 35,    "      PowerState(0x%08X ms), Check PCIe register,M_Chk_Support_ASPML11 IsNonZero=0x%X,_Chk_HostEn_ASPML11 IsNonZero=0x%X",4 2 2
+85 36,    "      PowerState(0x%08X ms), Check PCIe register,M_Chk_Support_ASPML12 IsNonZero=0x%X,M_Chk_HostEn_ASPML12 IsNonZero=0x%X",4 2 2
+85 37,    "      PowerState(0x%08X ms), L1TO Enabled",4
+85 38,    "      PowerState(0x%08X ms), PS4 resume,PCIe Int0Sts=%d,PCIe Int1Sts=%d",4 4 4
+85 39,    "      PowerState(0x%08X ms), PS4 resume,NVMe IntSts=%d,NVMe IntSts=%d,CC_RDY=%d,CMD_RDY=%d",4 4 1 1 2
+85 40,    "      PowerState(0x%08X ms), assert clkreq#(ISR)",4
+85 41,    "      PowerState(0x%08X ms), NVMe Idle Bitmap=0x%04X", 4 2
+85 42,    "      PowerState(0x%08X ms), CQ busy, u8QID=0x%X,M_Get_CQ_HDBL(u8QID)=0x%X,M_Get_2260_CQ_TDBL(u8QID)=0x%X ",4 2 2 2
+85 43,    "      PowerState(0x%08X ms), CQ busy, u8QID=0x%X,M_Get_SQ_TDBL(u8QID)=0x%X,M_Get_2260_SQ_HDBL(u8QID)=0x%X ",4 2 2 2
+85 44,    "      PowerState(0x%08X ms), busy: sq_cmd_buf",4
+85 45,    "      PowerState(0x%08X ms), busy: hwcq",4
+85 46,    "      PowerState(0x%08X ms), busy: dmacq",4
+85 47,    "      PowerState(0x%08X ms), busy: fwcq",4
+85 48,    "      PowerState(0x%08X ms), busy: fwrq",4
+85 49,    "      PowerState(0x%08X ms), busy: prd",4
+85 4A,    "      PowerState(0x%08X ms), busy: unex_engine",4
+85 4B,    "      PowerState(0x%08X ms), Idle BG Time: Target Time=0x%08X, Idle State=0x%X", 4 4 2
+;=======================  RAID ====================================
+
+;=======================  Admin command ====================================
+{SetMsgColor = MAROON}
+87 00,    "      Admin     (0x%08X ms), Admin_DELETE_SQ",4           
+87 01,    "      Admin     (0x%08X ms), Admin_CREATE_SQ",4           
+87 02,    "      Admin     (0x%08X ms), Admin_GET_LOG_PAGE",4        
+87 04,    "      Admin     (0x%08X ms), Admin_DELETE_CQ",4           
+87 05,    "      Admin     (0x%08X ms), Admin_CREATE_CQ",4           
+87 06,    "      Admin     (0x%08X ms), Admin_IDENTIFY,M_NVMe_CNS %d",4 2            
+87 08,    "      Admin     (0x%08X ms), Admin_ABORT_CMD",4           
+87 09,    "      Admin     (0x%08X ms), Admin_SET_FEATURES",4        
+87 0A,    "      Admin     (0x%08X ms), Admin_GET_FEATURES",4        
+87 0C,    "      Admin     (0x%08X ms), Admin_ASYNC_EVENT",4         
+87 10,    "      Admin     (0x%08X ms), Admin_ACTIVATE_FW",4         
+87 11,    "      Admin     (0x%08X ms), Admin_DOWNLOAD_FW",4         
+87 14,    "      Admin     (0x%08X ms), Admin_DEVICE_SELF_TEST",4          
+87 80,    "      Admin     (0x%08X ms), Admin_FORMAT_NVM",4          
+87 81,    "      Admin     (0x%08X ms), Admin_SECURITY_SEND",4       
+87 82,    "      Admin     (0x%08X ms), Admin_SECURITY_RECV",4       
+87 C0,    "      Admin     (0x%08X ms), Admin_Vendor_NonData",4       
+87 C1,    "      Admin     (0x%08X ms), Admin_Vendor_DataOut",4       
+87 C2,    "      Admin     (0x%08X ms), Admin_Vendor_DataIn",4           
+
+;=======================  VDT ====================================
+{SetMsgColor = NAVY}
+88 00,    "ASSERT HANG: VDT       (0x%08X ms), VDT 1.5V Fail",4    
+88 01,    "ASSERT HANG: VDT       (0x%08X ms), VDT 2.3V Fail",4     
+88 02,    "ASSERT HANG: VDT       (0x%08X ms), VDT 2.7V Fail",4     
+88 03,    "ASSERT HANG: VDT       (0x%08X ms), VDT 4.0V Fail",4        
+88 04,    "ASSERT HANG: UART_RX   (0x%08X ms), UART trigger save log",4
+
+;=======================  Thermal ====================================
+{SetMsgColor = TEAL}
+8A 00,    "      Thermal/PS(0x%08X ms), Currrent ASIC Temperature = %d",4 2    
+8A 01,    "      Thermal/PS(0x%08X ms), Currrent External Sensor Temperature = %d",4 2    
+8A 03,    "      Thermal/PS(0x%08X ms), Normalized Calculation Temperature = %d",4 1    
+8A 04,    "      Thermal/PS(0x%08X ms), IdleFunction(), Start, Idle %d ms",4 2    
+8A 05,    "      Thermal/PS(0x%08X ms), IdleFunction(), End, Break Event = %d",4 2    
+8A 10,    "      Thermal/PS(0x%08X ms), Change power state gCurrThrottle=%d to gNextThrottle=%d",4 1 1   
+8A 11,    "      Thermal/PS(0x%08X ms), CPU_Sleep_Flow(), Start",4
+8A 12,    "      Thermal/PS(0x%08X ms), CPU_Sleep_Flow(), End, gDevCurPS = %d,u8IntSrc=%d",4 1 1
+8A 21,    "      Thermal/PS(0x%08X ms), power state gCurrThrottle %d change to gNextThrottle %d Sys:0x%02X Ldpc:0x%02X Flash:0x%02X",4,1 1 2 2 2  
+8A 30,    "      Thermal/PS(0x%08X ms),C_SaveID_Fast_Boot, Start",4
+8A 31,    "      Thermal/PS(0x%08X ms),C_SaveID_ShutDownFast_Boot, Start",4
+;=======================  Sys  ====================================
+{SetMsgColor = NAVY}
+8B 00,    "ASSERT LOG: SYS       (0x%08X ms), Invalid Doorbell, SQ bitmap=0x%04X, CQ bitmap=0x%04X",4 2 2 
+8B 01,    "ASSERT HANG: SYS       (0x%08X ms), NVMe DMA error, DMA error bitmap=0x%04X",4 2
+
+;=======================  Security  ====================================
+{SetMsgColor = MAROON}
+;F/W Download Event
+8C 00,    "SECURITY (0x%08X ms): FW Download Init",4
+8C 01,    "SECURITY (0x%08X ms): FW Download Complete",4
+8C 02,    "SECURITY (0x%08X ms): FW Attestation Error, invalid binary, RSA signature mismatch",4
+8C 03,    "SECURITY (0x%08X ms): Invalid Security version specified",4
+8C 04,    "SECURITY (0x%08X ms): Invalid public key specified",4
+8C 06,    "SECURITY (0x%08X ms): Invalid FW slot id Specified (NVMe only)",4
+8C 07,    "SECURITY (0x%08X ms): Media programming error (error occurred writing FW to NVM)",4
+8C 08,    "SECURITY (0x%08X ms): Firmware Commit initiated",4
+8C 09,    "SECURITY (0x%08X ms): Firmware Commit Complete, State:%d (1:No activate or activate now, 2:Activte after reset, 3:Commit fail)",4 2
+
+;Host Security Command
+8C 10,    "SECURITY (0x%08X ms): Secure Erase initiated",4
+8C 12,    "SECURITY (0x%08X ms): Secure Erase Complete",4
+8C 16,    "SECURITY (0x%08X ms): Secure Erase Invalid",4
+
+;VU Commands
+8C 20    "SECURITY (0x%08X ms): Low level format command has been issued, IsReset EraseCnt:0x%X,%X IsClear SMART Log:0x%X, IsCrear EventLog:0x%X", 4 2 2 2 2
+8C 21,   "SECURITY (0x%08X ms): Low level Complete, IsReset EraseCnt:0x%X,%X IsClear SMART Log:0x%X, IsCrear EventLog:0x%X", 4 2 2 2 2
+8C 22,   "SECURITY (0x%08X ms): Set Life Cycle State requested",4
+8C 23,   "SECURITY (0x%08X ms): Set Life Cycle State succeeded",4
+8C 24,   "SECURITY (0x%08X ms): Set Life Cycle State failed",4
+8C 25,   "SECURITY (0x%08X ms): JTAG interface enabled",4
+8C 26,   "SECURITY (0x%08X ms): JTAG interface disabled",4
+
+;VS Authentication Commands
+8C 30,   "SECURITY (0x%08X ms): Authentication initiated",4
+8C 31,   "SECURITY (0x%08X ms): Authentication succeeded",4
+8C 32,   "SECURITY (0x%08X ms): Authentication failed due to invalid credentials",4
+8C 33,   "SECURITY (0x%08X ms): Max authentication attempts exceeded",4
+8C 34,   "SECURITY (0x%08X ms): Authentication timeout",4
+
+;====================== Core1 event ================================================
+;{SetMsgColor = LIME}
+A0 00,	  "      Core1     (0x%08X ms), Core 1 Log Overflow",4 
+A0 01,	  "      Core1     (0x%08X ms), Core 1 ready",4 
+A0 80,    "ASSERT HANG: Core1     (0x%08X ms), ===> Firmware Logic Hang, core 1",4
+
+;=======================  TEMP debug ====================================
+{SetMsgColor = GRAY}
+AA 00,    "      SwapData  (0x%08X ms), Act0=0x%04X, ptr=0x%04X, Act1=0x%04X, ptr=0x%04X",4 2 2 2 2
+AA 01,    "      BeforeSwap(0x%08X ms), Act1_Ptr=0x%04X",4 2
+AA 02,    "      AfterSwap (0x%08X ms), Act1_Ptr=0x%04X",4 2
+
+;====================== SelfTest================================================
+{SetMsgColor = BLACK}
+89 01,	  "      Burn-in   (0x%08X ms),Loop 0x%02X ,Block =0x%02X ,SelfTest Write.",4 2 2
+89 02,	  "      Burn-in   (0x%08X ms),Loop 0x%02X ,Block =0x%02X ,SelfTest Erase.",4 2 2
+89 03,	  "      Burn-in   (0x%08X ms),Loop 0x%02X ,Block =0x%02X SelfTest  Read.",4 2 2
+89 04,	  "      Burn-in   (0x%08X ms),Loop 0x%02X ,Block =0x%02X SelfTest  End.",4 2 2
+89 05,	  "      Burn-in   (0x%08X ms),Loop 0x%02X ,Block =0x%02X SelfTest Read Start.",4 2 2 
+89 06,	  "      Burn-in   (0x%08X ms),Loop 0x%02X ,Block =0x%02X SelfTest Read End.",4 2 2
+{SetMsgColor = BLUE}   
+89 00,	  "      Burn-in   (0x%08X ms),Loop 0x%02X SelfTest Start.",4 2 
+89 07,	  "      Burn-in   (0x%08X ms),Loop 0x%02X End.",4 2 
+89 08,	  "      Burn-in   (0x%08X ms),All SelfTest Loop Finish, Total Loops = 0x%02X .",4 2 
+{SetMsgColor = BLACK}  
+89 09,	  "      Burn-in   (0x%08X ms),Loop 0x%02X Save Info as resume .",4 2  
+89 0A,	  "      Burn-in   (0x%08X ms),Selftest Update Orhpan, Total Loops = 0x%02X .",4 2 
+89 0B,	  "      Burn-in   (0x%08X ms),Selftest Update Info Block, Total Loops = 0x%02X .",4 2 
+
+;=======================  IntelSecurityAPI ====================================
+;90 = C_LOG_BaseFW
+;91 = C_LOG_SecurityAPI
+
+;==================================BASE FW======================================
+{SetMsgColor = YELLOW}
+90 00,	  "      BASE FW (0x%08X ms), BaseFW_InitAPIFuncPtr()",4
+90 01,	  "      BASE FW (0x%08X ms), SecIntf_TimerDiff()",4
+90 02,	  "      BASE FW (0x%08X ms), SecIntf_GetSecState(), SecState=0x%08X",4 4
+90 03,	  "      BASE FW (0x%08X ms), SecIntf_SetSecState(), stateChange=0x%04X, SecState=0x%08X",4 2 4
+90 04,	  "      BASE FW (0x%08X ms), SecIntf_RangePolicyUpdate(), action=0x%04X, numPolicies=0x%04X, elementSize=0x%04X",4 2 2 2
+90 05,	  "      BASE FW (0x%08X ms), MBR Policy updage 1, LBAEnd=0x%08X, KEYID=0x%04X",4 4 2
+90 06,	  "      BASE FW (0x%08X ms), MBR Policy updage 2, Redirectlba=0x%08X",4 4
+90 07,	  "      BASE FW (0x%08X ms), GetStartLBA FAIL, u8FileID=0x%04X",4 2
+90 08,	  "      BASE FW (0x%08X ms), GetNVM_RWInfo FAIL, u32BlobSize=0x%08X, fileAccess.bytes=0x%08X",4 4 4
+90 09,	  "      BASE FW (0x%08X ms), SecIntf_NvmWrite() 1, u32SrcAddr=0x%08X, fileAccess.fileId=0x%04X, lbaAccess=0x%04X",4 4 2 2
+90 0A,	  "      BASE FW (0x%08X ms), SecIntf_NvmWrite() 2, fileAccess.offset=0x%08X, fileAccess.bytes=0x%08X",4 4 4
+90 0B,	  "      BASE FW (0x%08X ms), SecIntf_NvmRead() 1, u32DesAddr=0x%08X, fileAccess.fileId=0x%04X, lbaAccess=0x%04X",4 4 2 2
+90 0C,	  "      BASE FW (0x%08X ms), SecIntf_NvmRead() 2, fileAccess.offset=0x%08X, fileAccess.bytes=0x%08X",4 4 4
+90 0D,	  "      BASE FW (0x%08X ms), SecIntf_NvmErase() 1, fileAccess.fileId=0x%04X, lbaAccess=0x%04X",4 2 2
+90 0E,	  "      BASE FW (0x%08X ms), SecIntf_NvmErase() 2, fileAccess.offset=0x%08X, fileAccess.bytes=0x%08X",4 4 4
+90 0F,	  "      BASE FW (0x%08X ms), SecIntf_GetGlobalRangeKey()",4
+90 10,	  "      BASE FW (0x%08X ms), SecIntf_SetGlobalRangeKey()",4
+90 11,	  "      BASE FW (0x%08X ms), CopyFileInfo 1, gMaxFileNum=0x%04X, blobId=0x%04X, blobSize=0x%08X",4 2 2 4
+90 12,	  "      BASE FW (0x%08X ms), CopyFileInfo 2, gMaxFileNum=0x%04X, blobId=0x%04X, u32LBA=0x%08X",4 2 2 4
+90 13,	  "      BASE FW (0x%08X ms), HandleTrustedSend_1-TRANSFER_BUT_DISCARD, ",4
+90 14,	  "      BASE FW (0x%08X ms), HandleTrustedSend_2, gSataErr=0x%04X",4 2
+90 15,	  "      BASE FW (0x%08X ms), HandleTrustedSend_3, uStatus=0x%04X",4 2
+90 16,	  "      BASE FW (0x%08X ms), HandleTrustedSend_4, uStatus=0x%04X",4 2
+90 17,	  "      BASE FW (0x%08X ms), HandleTrustedReceive_1, uStatus=0x%04X",4 2
+90 18,	  "      BASE FW (0x%08X ms), HandleTrustedReceive_2, uStatus=0x%04X",4 2
+90 19,	  "      BASE FW (0x%08X ms), gfpSecIntf_InitStart start!!!. TotalDataSize=0x%08X",4 4
+90 1A,	  "      BASE FW (0x%08X ms), gfpSecIntf_InitStart end!!!",4
+90 1B,	  "      BASE FW (0x%08X ms), SecIntf_SetResumeData(), numBytes=0x%04X",4 2
+90 1C,	  "      BASE FW (0x%08X ms), SecIntf_GetResumeData(), numBytes=0x%04X",4 2
+90 1D,	  "      BASE FW (0x%08X ms), NoticeDevSleep-Start, status=0x%04X",4 2
+90 1E,	  "      BASE FW (0x%08X ms), NoticeDevSleep-End, status=0x%04X",4 2
+90 1F,	  "      BASE FW (0x%08X ms), Crypto_LoadKey()",4
+90 20,	  "      BASE FW (0x%08X ms), Crypto_DeleteKey()",4
+90 21,	  "      BASE FW (0x%08X ms), NvmWrite_OutofRange, blobSize=0x%08X",4 4
+90 22,	  "      BASE FW (0x%08X ms), NvmRead_OutofRange",4 4
+90 23,	  "      BASE FW (0x%08X ms), SetPsid, Result=0x%04X",4 2
+90 24,	  "      BASE FW (0x%08X ms), OpalEdriveDisable",4
+90 25,	  "      BASE FW (0x%08X ms), AllowFwUpdate, Result=0x%04X",4 2
+90 26,	  "      BASE FW (0x%08X ms), SecIntf_ResumeCmdHandling()",4
+90 27,	  "      BASE FW (0x%08X ms), SecIntf_PauseCmdHandling()",4
+90 28,	  "      BASE FW (0x%08X ms), SecIntf_GetMsTimestamp()",4
+90 29,	  "      BASE FW (0x%08X ms), SecIntf_FeatureActive(), feature=0x%04X",4 2
+90 2A,	  "      BASE FW (0x%08X ms), SecIntf_GetPsidEntropy()",4
+90 2B,	  "      BASE FW (0x%08X ms), SecIntf_GetEfuseData()",4
+90 2C,	  "      BASE FW (0x%08X ms), Crypto_GetRandom()",4
+90 2D,	  "      BASE FW (0x%08X ms), Crypto_GenKey()",4
+90 2E,	  "      BASE FW (0x%08X ms), Crypto_DeriveKey()",4
+90 2F,	  "      BASE FW (0x%08X ms), Crypto_Hash()",4
+90 30,	  "      BASE FW (0x%08X ms), SecIntf_GetFileLba()",4
+90 31,	  "      BASE FW (0x%08X ms), SecIntf_GetUserMaxSectors()",4
+90 32,	  "      BASE FW (0x%08X ms), SecIntf_TimerDiff() Error",4
+90 33,	  "      BASE FW (0x%08X ms), GetPsid, Result=0x%04X",4 2
+90 34,	  "      BASE FW (0x%08X ms), HandleTrustedReceive_3, u32ValidBytes=0x%08X, g32ReceivedBytes=0x%08X",4 4 4
+
+;=======================  POR ====================================
+{SetMsgColor = NAVY}
+AB 00,    "  INFO_POR      (0x%08X ms),Sprog EOB  B:0x%x P:0x%x",4 2 2
+AB 01,    "  INFO_POR      (0x%08X ms),GenTailB:0x%x,SN:0x%x,UnsavedCnt:0x%x",4 2 4 2
+AB 02,    "  INFO_POR      (0x%08X ms),New actB:%d,gActMode:%d,bp:0x%x",4 2 1 1
+AB 03,    "  INFO_POR      (0x%08X ms),ChkCopyReadEccFail (start):Ch %d CE %d FBlock 0x%x FPage 0x%x OrgBufIdx 0x%x",4 1 1 2 2 2
+AB 04,    "  INFO_POR      (0x%08X ms),ChkCopyReadEccFail (start):ErrFlag 0x%x EccStatus 0x%x",4 1 1 1 1
+AB 05,    "  INFO_POR      (0x%08X ms),Ch %d CE %d FBlock 0x%x FPage:%x",4 1 1 2 2
+AB 06,    "  INFO_POR      (0x%08X ms),VDT_Handler g16arActiveFBlock=0x0x, garActLSBType[0]=0x0x",4 2 2
+AB 07,    "  INFO_POR      (0x%08X ms),VDT_Handler g32arDataPagePtr[0]=0x0x, gVpCnt.g32arValidFPageCnt[g16arActiveFBlock[0]]=0x0x",4 4 4
+AB 08,    "  INFO_POR      (0x%08X ms),PSetErrBlock B:%x,cnt:%d",4 2 2
+AB 09,    "  INFO_POR      (0x%08X ms),SetErrBlock g16LastActBlock:%x",4 2
+AB 0A,    "  INFO_POR      (0x%08X ms),PopSysSB SB:%x,u8SysBlockCnt:%x",4 4 2
+AB 0B,    "  INFO_POR      (0x%08X ms),EraseSysSB,SB:%x",4 2
+AB 0C,    "  INFO_POR      (0x%08X ms),AddPowerOnFailBlock B:%x,u8ECCFailSrc:%x,u16EccErrCnt:%d",4 2 2 2
+AB 0D,    "  INFO_POR      (0x%08X ms),MapErrHandle",4
+AB 0E,    "  INFO_POR      (0x%08X ms),RandomSparePool SpareSel:%d ,RandomTimes:%d,SpareCnt:%d",4 2 2 2
+AB 0F,    "  INFO_POR      (0x%08X ms),RandomSparePool PowerOnCnt:%d",4 4
+AB 10,    "  INFO_POR      (0x%08X ms),Link block FreePage:%x",4 2
+AB 11,    "  INFO_POR      (0x%08X ms),InsertUnfullDataBlock B:0x%x,gSprIsLSB:0x%x",4 2 2
+AB 12,    "  INFO_POR      (0x%08X ms),erase g16LastActBlock:%x",4 2
+AB 13,    "  INFO_POR      (0x%08X ms),rebuild Block Mode",4
+AB 14,    "  INFO_POR      (0x%08X ms),build ZoneIdx:%d finish gBuildZoneNum:%d,gTotalZoneNum:%d",4 2 2 2
+AB 15,    "  INFO_POR      (0x%08X ms),MapInfo block FreePage:0x%x",4 2
+AB 16,    "  INFO_POR      (0x%08X ms),MapFBlock0B:%x,P:%d",4 2 4
+AB 17,    "  INFO_POR      (0x%08X ms),MapFBlock1B:%x,P:%d",4 2 4
+AB 18,    "  INFO_POR      (0x%08X ms),Map lastActB:%x,P:%d",4 2 4
+AB 19,    "  INFO_POR      (0x%08X ms),Map TailB:%x,Serial:%d",4 2 4
+AB 1A,    "  INFO_POR      (0x%08X ms),ReadLinkTable Act0B:%d  SLC:%d ",4 2 2
+AB 1B,    "  INFO_POR      (0x%08X ms),ReadLinkTable Vp:%d,Data ptr:%d",4 4 4
+AB 1C,    "  INFO_POR      (0x%08X ms),Read Link Table done PwrFailStatus:0x%x ,u32EndTime:%d",4 2 4
+AB 1D,    "  INFO_POR      (0x%08X ms),ActB:0x%x, SLC:0x%x",4 2 2
+AB 1E,    "  INFO_POR      (0x%08X ms),Vp:%d,Dataptr:%d",4 4 4
+AB 1F,    "  INFO_POR      (0x%08X ms),gFastBoot:0x%x ,glwbsPwrFailStatus:0x%x,g16TotalDataBlock:0x%x",4 1 1 2
+AB 20,    "  INFO_POR      (0x%08X ms),ISP code start up %x",4 2
+AB 21,    "  INFO_POR      (0x%08X ms),g16LaterBadCnt:0x%x,g16FinalBadCnt:%d",4 2 2
+AB 22,    "  INFO_POR      (0x%08X ms),MarkBadBlock g16PureSpareCnt:0x%x < gMinSprBlock:0x%x - Too Much Bad!",4 2 2
+AB 23,    "  INFO_POR      (0x%08X ms),MarkBadBlock UB:0x%x,u8MarkBadStatus:0x%x",4 2 2
+AB 24,    "  INFO_POR      (0x%08X ms),Save map B:0x%x,Page:%d,Zone:%d",4 2 4 2
+AB 25,    "  INFO_POR      (0x%08X ms),Savemap end Page:%d,Zone:%d",4 4 2
+AB 26,    "  INFO_POR      (0x%08X ms),New MapInfoB:0x%x",4 2
+AB 27,    "  INFO_POR      (0x%08X ms),New MapB:0x%x,Zone:%d",4 2 2
+AB 28,    "  INFO_POR      (0x%08X ms),SaveG2F B:0x%x,P:%d,Zone:%d",4 2 2 2
+AB 29,    "  INFO_POR      (0x%08X ms),SwapDataBlock g16CleanFBlock:0x%x SLCBlockBitMap:0x%x",4 2 2
+AB 2A,    "  INFO_POR      (0x%08X ms),SwapDataBlock g32CleanValidUnitCnt:0x%x u32MoveWriteRatioNew:0x%x",4 4 4   
+AB 2B,    "  INFO_POR      (0x%08X ms),SwapActiveBlock start",4   
+AB 2C,    "  INFO_POR      (0x%08X ms),SwapActiveBlock OldB:0x%x NewB:%x,Vp:%d",4 2 2 4  
+AB 2D,    "  INFO_POR      (0x%08X ms),ValidFPageCnt:%d ,u16OldActiveBlock:%d",4 4 2  
+AB 2E,    "  INFO_POR      (0x%08X ms),g32CleanValidUnitCnt:%d",4 4 
+AB 2F,    "  INFO_POR      (0x%08X ms),SwapActiveBlock end",4
+AB 30,    "  INFO_POR      (0x%08X ms),Ub:%d,SB0:%d",4 2 2
+AB 31,    "  INFO_POR      (0x%08X ms),Ub:%d,SB1:%d",4 2 2
+AB 50,    "  INFO_POR      (0x%08X ms),g32CleanValidUnitCnt:0x%x u32UnitPerBlock:0x%x",4 4 4   
+AB 51,    "  INFO_POR      (0x%08X ms),gVpCnt.g32arValidFPageCnt:0x%x g16CleanFBlock:0x%x",4 4 2  
+AB 52,    "  INFO_POR      (0x%08X ms),u32GHP:0x%x H2fBlock:0x%x g16CleanFBlock:0x%x",4 4 2 2  
+AB 53,    "  INFO_POR      (0x%08X ms),u32SrcUnitPage:0x%x H2fPage:0x%x",4 4 4 
+AB 54,    "  INFO_POR      (0x%08X ms),Recheck CleanValidUnitCnt:0x%x u32F2HCount:0x%x",4 4 4 
+AB 55,    "  INFO_POR      (0x%08X ms),Rebuild F2H from H2F g32TotalHPage:0x%x",4 4 
+AB 56,    "  INFO_POR      (0x%08X ms),!!!error F2HMap[1][u32FPage:0x%x]:0x%x",4 4 4
+AB 57,    "  INFO_POR      (0x%08X ms),!!!error u32GlobalHPage:0x%x",4 4 
+AB 58,    "  INFO_POR      (0x%08X ms),RealH2FValidUnitCnt:0x%x,gVpCnt.g32arValidFPageCnt:0x%x",4 4 4
+AB 59,    "  INFO_POR      (0x%08X ms),Compare Real and CleanF2HMap",4
+AB 5A,    "  INFO_POR      (0x%08X ms),g32arF2HMap[1][u32SrcUnitPage]:0x%x,g32arCleanF2HMap[0][0][u32SrcUnitPage]:0x%x",4 4 4
+AB 5B,    "  INFO_POR      (0x%08X ms),u32SrcUnitPage:0x%x",4 4 
+AB 5C,    "  INFO_POR      (0x%08X ms),garH2FMap[g32arF2HMap[1][u32SrcUnitPage]]:0x%x,garH2FMap[g32arCleanF2HMap[0][0][u32SrcUnitPage]]:0x%x",4 4 4
+AB 5D,    "  INFO_POR      (0x%08X ms),RebuildEOB garH2FMap[g32arF2HMap[0][u32SrcUnitPage]]:0x%x",4 4
+;{SetMsgColor = BLACK}
+;{SetMsgColor = BLUE}
+;{SetMsgColor = RED}
+;{SetMsgColor = GREEN}
+;{SetMsgColor = PURPLE}
+;{SetMsgColor = NAVY}
+;{SetMsgColor = LIME}
+;{SetMsgColor = YELLOW}
+;{SetMsgColor = CYAN}
+;{SetMsgColor = MAGENTA}
+;{SetMsgColor = GRAY}
+;{SetMsgColor = MAROON}
+;{SetMsgColor = OLIVE}
+;{SetMsgColor = TEAL}

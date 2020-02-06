@@ -1,0 +1,13 @@
+[DEFAULT]
+BASEURL=http://www.baidu.com/
+[{000214A0-0000-0000-C000-000000000046}]
+Prop3=19,2
+[InternetShortcut]
+URL=http://www.upantool.com/?fwen
+IDList=
+IconFile=C:\Windows\system32\SHELL32.dll
+IconIndex=13
+HotKey=0
+[InternetShortcut.A]
+[InternetShortcut.W]
+URL=https://www.baidu.com/s?wd+AD0-U+dtiRz06nf1E-

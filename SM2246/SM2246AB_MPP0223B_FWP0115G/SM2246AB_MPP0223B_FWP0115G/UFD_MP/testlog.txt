@@ -1,0 +1,2180 @@
+
+==================================================
+Begin Test Time : 2016/02/24 16:33
+Begin Serial : AA000000000000001407
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 0
+Preload fail = 0
+
+Test Total = 0
+Test Pass = 0
+Test Fail = 0
+End Test Time   : 2016/02/24 16:33 
+==================================================
+
+==================================================
+Begin Test Time : 2016/02/24 16:35
+Begin Serial : AA000000000000001407
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 0
+Preload fail = 0
+
+Test Total = 0
+Test Pass = 0
+Test Fail = 0
+End Test Time   : 2016/02/24 16:35 
+==================================================
+
+==================================================
+Begin Test Time : 2016/02/24 16:39
+Begin Serial : AA000000000000001408
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 1
+Test Fail = 0
+End Test Time   : 2016/02/24 16:42 
+==================================================
+
+==================================================
+Begin Test Time : 2016/02/24 16:50
+Begin Serial : AA000000000000001408
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 0
+Preload fail = 0
+
+Test Total = 0
+Test Pass = 0
+Test Fail = 0
+End Test Time   : 2016/02/24 16:50 
+==================================================
+
+==================================================
+Begin Test Time : 2016/02/24 16:50
+Begin Serial : AA000000000000001408
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 2
+Preload fail = 0
+
+Test Total = 2
+Test Pass = 0
+Test Fail = 2
+End Test Time   : 2016/02/24 16:55 
+==================================================
+
+==================================================
+Begin Test Time : 2016/02/24 17:16
+Begin Serial : AA000000000000001408
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 0
+Test Fail = 1
+End Test Time   : 2016/02/24 17:17 
+==================================================
+
+==================================================
+Begin Test Time : 2016/02/24 17:23
+Begin Serial : AA000000000000001408
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 0
+Test Fail = 1
+End Test Time   : 2016/02/24 17:31 
+==================================================
+
+==================================================
+Begin Test Time : 2016/02/24 17:36
+Begin Serial : AA000000000000001408
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 0
+Preload fail = 0
+
+Test Total = 0
+Test Pass = 0
+Test Fail = 0
+End Test Time   : 2016/02/24 17:36 
+==================================================
+
+==================================================
+Begin Test Time : 2016/02/24 17:38
+Begin Serial : AA000000000000001409
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 1
+Test Fail = 0
+End Test Time   : 2016/02/24 17:48 
+==================================================
+
+==================================================
+Begin Test Time : 2016/02/24 17:48
+Begin Serial : AA000000000000001409
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 3
+Preload fail = 0
+
+Test Total = 3
+Test Pass = 0
+Test Fail = 3
+End Test Time   : 2016/02/24 18:01 
+==================================================
+
+==================================================
+Begin Test Time : 2016/02/24 18:07
+Begin Serial : AA000000000000001409
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 0
+Test Fail = 1
+End Test Time   : 2016/02/24 19:03 
+==================================================
+
+==================================================
+Begin Test Time : 2016/02/24 20:02
+Begin Serial : AA000000000000001409
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 0
+Preload fail = 0
+
+Test Total = 0
+Test Pass = 0
+Test Fail = 0
+End Test Time   : 2016/02/24 20:10 
+==================================================
+
+==================================================
+Begin Test Time : 2016/02/24 20:11
+Begin Serial : AA000000000000001409
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 0
+Test Fail = 1
+End Test Time   : 2016/02/24 20:13 
+==================================================
+
+==================================================
+Begin Test Time : 2016/02/24 20:25
+Begin Serial : AA000000000000001410
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 1
+Test Fail = 0
+End Test Time   : 2016/02/24 20:28 
+==================================================
+
+==================================================
+Begin Test Time : 2016/02/24 20:34
+Begin Serial : AA000000000000001411
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 1
+Test Fail = 0
+End Test Time   : 2016/02/24 20:38 
+==================================================
+
+==================================================
+Begin Test Time : 2016/02/24 20:39
+Begin Serial : AA000000000000001411
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 0
+Test Fail = 1
+End Test Time   : 2016/02/24 20:43 
+==================================================
+
+==================================================
+Begin Test Time : 2016/02/24 20:44
+Begin Serial : AA000000000000001412
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 1
+Test Fail = 0
+End Test Time   : 2016/02/24 20:55 
+==================================================
+
+==================================================
+Begin Test Time : 2016/02/24 21:19
+Begin Serial : AA000000000000001412
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 0
+Test Fail = 1
+End Test Time   : 2016/02/24 21:20 
+==================================================
+
+==================================================
+Begin Test Time : 2016/02/24 21:20
+Begin Serial : AA000000000000001412
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 0
+Preload fail = 0
+
+Test Total = 0
+Test Pass = 0
+Test Fail = 0
+End Test Time   : 2016/02/24 21:57 
+==================================================
+
+==================================================
+Begin Test Time : 2016/02/24 21:58
+Begin Serial : AA000000000000001413
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 1
+Test Fail = 0
+End Test Time   : 2016/02/24 22:19 
+==================================================
+
+==================================================
+Begin Test Time : 2016/02/24 22:20
+Begin Serial : AA000000000000001414
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 1
+Test Fail = 0
+End Test Time   : 2016/02/25 10:02 
+==================================================
+
+==================================================
+Begin Test Time : 2016/02/25 10:02
+Begin Serial : AA000000000000001415
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 1
+Test Fail = 0
+End Test Time   : 2016/02/25 10:06 
+==================================================
+
+==================================================
+Begin Test Time : 2016/02/25 10:06
+Begin Serial : AA000000000000001416
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 1
+Test Fail = 0
+End Test Time   : 2016/02/25 10:07 
+==================================================
+
+==================================================
+Begin Test Time : 2016/02/25 10:08
+Begin Serial : AA000000000000001416
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 0
+Preload fail = 0
+
+Test Total = 0
+Test Pass = 0
+Test Fail = 0
+End Test Time   : 2016/02/25 10:13 
+==================================================
+
+==================================================
+Begin Test Time : 2016/02/25 10:28
+Begin Serial : AA000000000000001418
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 2
+Preload fail = 0
+
+Test Total = 2
+Test Pass = 2
+Test Fail = 0
+End Test Time   : 2016/02/25 10:50 
+==================================================
+
+==================================================
+Begin Test Time : 2016/02/25 11:01
+Begin Serial : AA000000000000001419
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 1
+Test Fail = 0
+End Test Time   : 2016/02/25 11:04 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/01 12:08
+Begin Serial : AA000000000000001419
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 0
+Preload fail = 0
+
+Test Total = 0
+Test Pass = 0
+Test Fail = 0
+End Test Time   : 2016/03/01 12:22 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/01 15:26
+Begin Serial : AA000000000000001419
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 0
+Preload fail = 0
+
+Test Total = 0
+Test Pass = 0
+Test Fail = 0
+End Test Time   : 2016/03/01 15:27 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/01 15:27
+Begin Serial : AA000000000000001420
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 2
+Preload fail = 0
+
+Test Total = 2
+Test Pass = 1
+Test Fail = 1
+End Test Time   : 2016/03/01 16:05 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/01 16:05
+Begin Serial : AA000000000000001421
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 1
+Test Fail = 0
+End Test Time   : 2016/03/01 16:21 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/01 16:21
+Begin Serial : AA000000000000001421
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 0
+Test Fail = 1
+End Test Time   : 2016/03/01 16:33 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/01 19:24
+Begin Serial : AA000000000000001421
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 0
+Preload fail = 0
+
+Test Total = 0
+Test Pass = 0
+Test Fail = 0
+End Test Time   : 2016/03/01 19:25 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/01 19:25
+Begin Serial : AA000000000000001421
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 0
+Test Fail = 1
+End Test Time   : 2016/03/01 19:43 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/01 19:47
+Begin Serial : AA000000000000001421
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 0
+Preload fail = 0
+
+Test Total = 0
+Test Pass = 0
+Test Fail = 0
+End Test Time   : 2016/03/01 19:54 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/02 10:13
+Begin Serial : AA000000000000001421
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 2
+Preload fail = 0
+
+Test Total = 2
+Test Pass = 0
+Test Fail = 2
+End Test Time   : 2016/03/02 10:21 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/02 10:23
+Begin Serial : AA000000000000001421
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 0
+Test Fail = 1
+End Test Time   : 2016/03/02 10:26 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/02 10:37
+Begin Serial : AA000000000000001421
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 0
+Test Fail = 1
+End Test Time   : 2016/03/02 10:39 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/02 10:41
+Begin Serial : AA000000000000001422
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 1
+Test Fail = 0
+End Test Time   : 2016/03/02 10:48 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/02 10:48
+Begin Serial : AA000000000000001422
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 4
+Preload fail = 0
+
+Test Total = 4
+Test Pass = 0
+Test Fail = 4
+End Test Time   : 2016/03/02 11:18 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/02 11:38
+Begin Serial : AA000000000000001423
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 2
+Preload fail = 0
+
+Test Total = 2
+Test Pass = 1
+Test Fail = 1
+End Test Time   : 2016/03/02 13:55 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/02 11:34
+Begin Serial : AA000000000000001422
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 0
+Test Fail = 1
+End Test Time   : 2016/03/02 13:55 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/02 14:04
+Begin Serial : AA000000000000001425
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 2
+Preload fail = 0
+
+Test Total = 2
+Test Pass = 2
+Test Fail = 0
+End Test Time   : 2016/03/02 14:26 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/02 14:32
+Begin Serial : AA000000000000001425
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 0
+Preload fail = 0
+
+Test Total = 0
+Test Pass = 0
+Test Fail = 0
+End Test Time   : 2016/03/02 14:48 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/02 15:07
+Begin Serial : AA000000000000001426
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 1
+Test Fail = 0
+End Test Time   : 2016/03/02 15:17 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/02 15:22
+Begin Serial : AA000000000000001427
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 1
+Test Fail = 0
+End Test Time   : 2016/03/02 15:24 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/02 15:30
+Begin Serial : AA000000000000001427
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 0
+Preload fail = 0
+
+Test Total = 0
+Test Pass = 0
+Test Fail = 0
+End Test Time   : 2016/03/02 15:36 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/02 15:41
+Begin Serial : AA000000000000001429
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 2
+Preload fail = 0
+
+Test Total = 2
+Test Pass = 2
+Test Fail = 0
+End Test Time   : 2016/03/02 15:55 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/02 15:57
+Begin Serial : AA000000000000001429
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 0
+Preload fail = 0
+
+Test Total = 0
+Test Pass = 0
+Test Fail = 0
+End Test Time   : 2016/03/02 15:59 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/02 16:28
+Begin Serial : AA000000000000001430
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 1
+Test Fail = 0
+End Test Time   : 2016/03/02 16:30 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/02 16:39
+Begin Serial : AA000000000000001431
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 1
+Test Fail = 0
+End Test Time   : 2016/03/02 16:42 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/02 16:49
+Begin Serial : AA000000000000001431
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 0
+Preload fail = 0
+
+Test Total = 0
+Test Pass = 0
+Test Fail = 0
+End Test Time   : 2016/03/02 16:54 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/02 16:54
+Begin Serial : AA000000000000001431
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 0
+Preload fail = 0
+
+Test Total = 0
+Test Pass = 0
+Test Fail = 0
+End Test Time   : 2016/03/02 16:55 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/02 18:01
+Begin Serial : AA000000000000001439
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 7
+Preload fail = 0
+
+Test Total = 7
+Test Pass = 7
+Test Fail = 0
+End Test Time   : 2016/03/02 19:03 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/02 21:17
+Begin Serial : AA000000000000001442
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 3
+Preload fail = 0
+
+Test Total = 3
+Test Pass = 3
+Test Fail = 0
+End Test Time   : 2016/03/02 21:32 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/03 10:08
+Begin Serial : AA000000000000001442
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 0
+Preload fail = 0
+
+Test Total = 0
+Test Pass = 0
+Test Fail = 0
+End Test Time   : 2016/03/03 10:11 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/03 10:12
+Begin Serial : AA000000000000001443
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 2
+Preload fail = 0
+
+Test Total = 2
+Test Pass = 1
+Test Fail = 1
+End Test Time   : 2016/03/03 10:14 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/03 10:14
+Begin Serial : AA000000000000001443
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 0
+Preload fail = 0
+
+Test Total = 0
+Test Pass = 0
+Test Fail = 0
+End Test Time   : 2016/03/03 10:18 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/03 10:40
+Begin Serial : AA000000000000001444
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 1
+Test Fail = 0
+End Test Time   : 2016/03/03 10:44 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/03 10:52
+Begin Serial : AA000000000000001445
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 1
+Test Fail = 0
+End Test Time   : 2016/03/03 11:06 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/03 12:07
+Begin Serial : AA000000000000001445
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 0
+Preload fail = 0
+
+Test Total = 0
+Test Pass = 0
+Test Fail = 0
+End Test Time   : 2016/03/03 12:07 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/03 12:13
+Begin Serial : AA000000000000001445
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 0
+Preload fail = 0
+
+Test Total = 0
+Test Pass = 0
+Test Fail = 0
+End Test Time   : 2016/03/03 13:16 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/03 14:30
+Begin Serial : AA000000000000001446
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 1
+Test Fail = 0
+End Test Time   : 2016/03/03 15:39 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/03 16:24
+Begin Serial : AA000000000000001448
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 2
+Preload fail = 0
+
+Test Total = 2
+Test Pass = 2
+Test Fail = 0
+End Test Time   : 2016/03/03 16:27 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/04 16:02
+Begin Serial : AA000000000000001451
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 3
+Preload fail = 0
+
+Test Total = 3
+Test Pass = 3
+Test Fail = 0
+End Test Time   : 2016/03/04 16:08 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/04 16:13
+Begin Serial : AA000000000000001452
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 1
+Test Fail = 0
+End Test Time   : 2016/03/04 16:14 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/14 12:31
+Begin Serial : AA000000000000001452
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 0
+Preload fail = 0
+
+Test Total = 0
+Test Pass = 0
+Test Fail = 0
+End Test Time   : 2016/03/14 12:31 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/14 12:31
+Begin Serial : AA000000000000001453
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 1
+Test Fail = 0
+End Test Time   : 2016/03/14 14:05 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/14 14:11
+Begin Serial : AA000000000000001455
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 2
+Preload fail = 0
+
+Test Total = 2
+Test Pass = 2
+Test Fail = 0
+End Test Time   : 2016/03/14 14:37 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/14 14:36
+Begin Serial : AA000000000000001456
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 1
+Test Fail = 0
+End Test Time   : 2016/03/14 14:42 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/14 14:56
+Begin Serial : AA000000000000001458
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 1
+Test Fail = 0
+End Test Time   : 2016/03/14 15:31 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/14 16:30
+Begin Serial : AA000000000000001459
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 0
+Preload fail = 0
+
+Test Total = 0
+Test Pass = 0
+Test Fail = 0
+End Test Time   : 2016/03/14 16:31 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/14 15:31
+Begin Serial : AA000000000000001459
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 1
+Test Fail = 0
+End Test Time   : 2016/03/14 16:31 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/14 16:31
+Begin Serial : AA000000000000001459
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 0
+Preload fail = 0
+
+Test Total = 0
+Test Pass = 0
+Test Fail = 0
+End Test Time   : 2016/03/14 16:36 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/14 16:38
+Begin Serial : AA000000000000001462
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 3
+Preload fail = 0
+
+Test Total = 3
+Test Pass = 3
+Test Fail = 0
+End Test Time   : 2016/03/14 16:52 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/14 17:00
+Begin Serial : AA000000000000001463
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 2
+Preload fail = 0
+
+Test Total = 2
+Test Pass = 0
+Test Fail = 2
+End Test Time   : 2016/03/14 17:13 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/14 17:52
+Begin Serial : AA000000000000001464
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 0
+Preload fail = 0
+
+Test Total = 0
+Test Pass = 0
+Test Fail = 0
+End Test Time   : 2016/03/14 17:54 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/14 17:14
+Begin Serial : AA000000000000001464
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 2
+Preload fail = 0
+
+Test Total = 2
+Test Pass = 0
+Test Fail = 2
+End Test Time   : 2016/03/14 17:55 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/14 17:59
+Begin Serial : AA000000000000001464
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 0
+Test Fail = 1
+End Test Time   : 2016/03/14 18:02 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/14 18:20
+Begin Serial : AA000000000000001464
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 0
+Test Fail = 1
+End Test Time   : 2016/03/14 18:52 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/14 18:52
+Begin Serial : AA000000000000001464
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 0
+Preload fail = 0
+
+Test Total = 0
+Test Pass = 0
+Test Fail = 0
+End Test Time   : 2016/03/14 18:55 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/14 18:56
+Begin Serial : AA000000000000001464
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 2
+Preload fail = 0
+
+Test Total = 2
+Test Pass = 0
+Test Fail = 2
+End Test Time   : 2016/03/14 19:37 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/14 19:47
+Begin Serial : AA000000000000001466
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 1
+Test Fail = 0
+End Test Time   : 2016/03/14 19:49 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/14 19:37
+Begin Serial : AA000000000000001465
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 1
+Test Fail = 0
+End Test Time   : 2016/03/14 20:05 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/14 19:51
+Begin Serial : AA000000000000001466
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 0
+Test Fail = 1
+End Test Time   : 2016/03/14 20:05 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/14 20:05
+Begin Serial : AA000000000000001466
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 2
+Preload fail = 0
+
+Test Total = 2
+Test Pass = 0
+Test Fail = 2
+End Test Time   : 2016/03/14 20:15 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/14 20:16
+Begin Serial : AA000000000000001467
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 1
+Test Fail = 0
+End Test Time   : 2016/03/14 20:21 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/14 20:26
+Begin Serial : AA000000000000001467
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 0
+Test Fail = 1
+End Test Time   : 2016/03/14 21:00 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/14 21:05
+Begin Serial : AA000000000000001468
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 1
+Test Fail = 0
+End Test Time   : 2016/03/14 21:07 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/14 21:21
+Begin Serial : AA000000000000001469
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 1
+Test Fail = 0
+End Test Time   : 2016/03/14 21:24 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/14 21:00
+Begin Serial : AA000000000000001473
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 5
+Preload fail = 0
+
+Test Total = 5
+Test Pass = 4
+Test Fail = 1
+End Test Time   : 2016/03/14 21:40 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/15 10:26
+Begin Serial : AA000000000000001474
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 1
+Test Fail = 0
+End Test Time   : 2016/03/15 10:28 
+==================================================
+
+==================================================
+Begin Test Time : 2016/03/15 10:33
+Begin Serial : AA000000000000001474
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 0
+Preload fail = 0
+
+Test Total = 0
+Test Pass = 0
+Test Fail = 0
+End Test Time   : 2016/03/15 10:33 
+==================================================
+
+==================================================
+Begin Test Time : 2016/05/21 00:19
+Begin Serial : AA000000000000001474
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 0
+Preload fail = 0
+
+Test Total = 0
+Test Pass = 0
+Test Fail = 0
+End Test Time   : 2016/05/21 00:21 
+==================================================
+
+==================================================
+Begin Test Time : 2016/05/21 00:21
+Begin Serial : AA000000000000001474
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 0
+Preload fail = 0
+
+Test Total = 0
+Test Pass = 0
+Test Fail = 0
+End Test Time   : 2016/05/21 00:22 
+==================================================
+
+==================================================
+Begin Test Time : 2016/05/21 00:22
+Begin Serial : AA000000000000001476
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 2
+Preload fail = 0
+
+Test Total = 2
+Test Pass = 2
+Test Fail = 0
+End Test Time   : 2016/05/21 00:23 
+==================================================
+
+==================================================
+Begin Test Time : 2016/05/21 00:24
+Begin Serial : AA000000000000001479
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 3
+Preload fail = 0
+
+Test Total = 3
+Test Pass = 3
+Test Fail = 0
+End Test Time   : 2016/05/21 12:23 
+==================================================
+
+==================================================
+Begin Test Time : 2016/05/23 23:16
+Begin Serial : AA000000000000001508
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 0
+Preload fail = 0
+
+Test Total = 0
+Test Pass = 0
+Test Fail = 0
+End Test Time   : 2016/05/23 23:16 
+==================================================
+
+==================================================
+Begin Test Time : 2016/05/25 16:47
+Begin Serial : AA000000000000001510
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 4
+Preload fail = 0
+
+Test Total = 4
+Test Pass = 2
+Test Fail = 2
+End Test Time   : 2016/05/26 17:25 
+==================================================
+
+==================================================
+Begin Test Time : 2016/05/26 17:26
+Begin Serial : AA000000000000001511
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 1
+Preload fail = 0
+
+Test Total = 1
+Test Pass = 1
+Test Fail = 0
+End Test Time   : 2016/05/26 17:27 
+==================================================
+
+==================================================
+Begin Test Time : 2016/05/26 18:14
+Begin Serial : AA000000000000001513
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 2
+Preload fail = 0
+
+Test Total = 2
+Test Pass = 2
+Test Fail = 0
+End Test Time   : 2016/05/26 18:15 
+==================================================
+
+==================================================
+Begin Test Time : 2016/05/26 22:56
+Begin Serial : AA000000000000001513
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 0
+Preload fail = 0
+
+Test Total = 0
+Test Pass = 0
+Test Fail = 0
+End Test Time   : 2016/05/27 10:16 
+==================================================
+
+==================================================
+Begin Test Time : 2016/05/27 17:06
+Begin Serial : AA000000000000001513
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 0
+Preload fail = 0
+
+Test Total = 0
+Test Pass = 0
+Test Fail = 0
+End Test Time   : 2016/05/27 17:06 
+==================================================
+
+==================================================
+Begin Test Time : 2016/05/28 15:19
+Begin Serial : AA000000000000001535
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 17
+Preload fail = 0
+
+Test Total = 17
+Test Pass = 15
+Test Fail = 2
+End Test Time   : 2016/05/29 12:03 
+==================================================
+
+==================================================
+Begin Test Time : 2016/05/29 12:03
+Begin Serial : AA000000000000001551
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 20
+Preload fail = 0
+
+Test Total = 20
+Test Pass = 16
+Test Fail = 4
+End Test Time   : 2016/05/29 22:48 
+==================================================
+
+==================================================
+Begin Test Time : 2016/05/29 23:33
+Begin Serial : AA000000000000001564
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 17
+Preload fail = 0
+
+Test Total = 17
+Test Pass = 13
+Test Fail = 4
+End Test Time   : 2016/05/30 13:10 
+==================================================
+
+==================================================
+Begin Test Time : 2016/06/01 11:33
+Begin Serial : AA000000000000001642
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 49
+Preload fail = 0
+
+Test Total = 49
+Test Pass = 37
+Test Fail = 12
+End Test Time   : 2016/06/02 14:32 
+==================================================
+
+==================================================
+Begin Test Time : 2016/06/02 14:32
+Begin Serial : AA000000000000001656
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 14
+Preload fail = 0
+
+Test Total = 14
+Test Pass = 14
+Test Fail = 0
+End Test Time   : 2016/06/03 16:29 
+==================================================
+
+==================================================
+Begin Test Time : 2016/06/03 16:29
+Begin Serial : AA000000000000001658
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 6
+Preload fail = 0
+
+Test Total = 6
+Test Pass = 2
+Test Fail = 4
+End Test Time   : 2016/06/04 11:44 
+==================================================
+
+==================================================
+Begin Test Time : 2016/06/04 16:22
+Begin Serial : AA000000000000001672
+Serial Mask :  AA##################
+
+Pretest fail = 0
+Write CID fail = 0
+Download ISP fail = 0
+Copy Compare fail = 0
+Format fail = 0
+
+Test Total = 0
+Preload fail = 0
+
+Test Total = 0
+Test Pass = 0
+Test Fail = 0
+End Test Time   : 2016/06/04 16:22 
+==================================================

@@ -1,0 +1,200 @@
+0x01>Open device handle fail (01)>Can't get device handle
+0x02>Allocate memory fail (02)>Can't allocate some buffers to start initial card thread
+0x08>Check FW RunMode fail (08)>Vendor command flow fail when check mode
+0x09>Read Parameter Table fail (09.01)>Vendor command flow fail when read parameter table
+0x09>Read Parameter Table fail (09.02)>Can't find parameter table string tag
+0x09>Read Parameter Table fail (09.03)>Can't find FlashID information
+0x0A>Read IDTable fail (0A)>Vendor command flow fail when read ID table
+0x0B>Keep Serial number fail (0B)>Can't get serial number from Idtable or MPInfo
+0x0C>Read MPInfo fail (0C)>Vendor command flow fail when read MPInfo
+0x0D>Check ChangeID flag fail (0D.01)>Vendor command flow fail when read parameter table
+0x0D>Check ChangeID flag fail (0D.03)>Wrong Parameter Table
+0x10>Download MPISP fail (10)>Allocate memory fail when download MPISP procedure
+0x11>Download MPISP fail (11)/(04.02)>Vendor command flow fail when force to RomCode mode 
+0x11>Download MPISP fail (11)/(06.02)>Vendor command flow fail when download code
+0x11>Download MPISP fail (11)/(06.03)>Vendor command flow fail when check mode
+0x11>Download MPISP fail (11)/(06.04)>Vendor command flow fail when reset cpu
+0x13>Read FlashID fail after download MPISP (13)>Vendor command flow fail when Read FlashID
+0x14>Can't support this unbalanced configuration (14)>Unbalanced configuration is not matched standard
+0x15>Can't support multi-die unbalanced mode (15)>Don't support multi-die unbalanced case
+0x16>Can't support this multi-die unbalanced configuration (16)>Now, just support final CE lost final die case
+0x17>Compare Flash Fail (17)>FlashID is not matched with FlashDB
+0x18>GPIO Check fail (18)/(3C.01)>Check setting about Toggle pin
+0x18>GPIO Check fail (18)/(3C.02)>Check setting about Reliable pin
+0x18>GPIO Check fail (18)/(3C.03)>Vendor command flow fail
+0x18>GPIO Check fail (18)/(3C.04)>Check setting about AleExtend pin
+0x19>Channel0-CE0 didn't exist flash (19)>Don't support this flash layout
+0x1A>Check MPISP Mode fail (1A)>Vendor command flow fail
+0x1B>Not MPISP Mode (1B)>Not MPISP mode
+0x1C>Check SanDisk Bics Read Retry fail (1C)/(3B.01)>Vendor command flow fail
+0x1D>Some die didn't support RR function (1D)>Some die didn't support Read Retry function
+0x1E>Read B16/B17 Grade fail (1E)/(3A.01)>Vendor command flow fail
+0x1F>Flash Mixed Different Grade (1F)>Mixed different grade flash
+0x20>Dump system block fail (20)/(13.01)>Load Parameter table fail
+0x20>Dump system block fail (20)/(13.02)>Vendor command flow fail when read flash page
+0x20>Dump system block fail (20)/(13.03)>Dump all Info Block fail
+0x20>Dump system block fail (20)/(13.04)>Dump all ISP Block fail
+0x20>Dump system block fail (20)/(13.05)>Dump BadInfo Block occur ECC fail
+0x21>SRAM Test fail (21)/(07.01)>Vendor command flow fail
+0x21>SRAM Test fail (21)/(07.02)>SRAM test fail
+0x22>Flash Connectivity Test fail (22)/(08.0A)>Vendor command flow fail when Read FlashID
+0x22>Flash Connectivity Test fail (22)/(08.0B)>Vendor command flow fail when Read Connectivity Test
+0x22>Flash Connectivity Test fail (22)/(08.12)>FlashID differece with FlashDB
+0x23>Generate CH/CE Map fail (23)/(0E.01)>The number of Ch or Ce is zero
+0x23>Generate CH/CE Map fail (23)/(0E.0C)>Die Num per Ce are different with DataBase
+0x23>Generate CH/CE Map fail (23)/(0E.0D)>Ce location per Ch are different
+0x23>Generate CH/CE Map fail (23)/(0E.0E)>CeMap mismatch setting
+0x23>Generate CH/CE Map fail (23)/(0E.0F)>ChMap mismatch setting
+0x24>Build Parameter Table fail (24)/(12.27)>It's not TLC flash
+0x24>Build Parameter Table fail (24)/(12.28)>Check parameter table correctness fail
+0x25>Set CardMode fail (25)/(26.01)>Vendor command flow fail
+0x25>Set CardMode fail (25)/(26.02)>Transform L06B to B0KB fail
+0x26>TranRTC fail (26)>Vendor command flow fail (Dll function)
+0x27>TranADJ fail (27)/(0C.01)>No Good Window for Read
+0x27>TranADJ fail (27)/(0C.02)>No Good Window for Program
+0x27>TranADJ fail (27)/(0C.03)>Program all fail in Tran Read Dll
+0x27>TranADJ fail (27)/(0C.04)>Read all fail in Tran Read Dll
+0x27>TranADJ fail (27)/(0C.05)>Program all fail in Tran Program Dll
+0x27>TranADJ fail (27)/(0C.06)>Read all fail in Tran Program Dll
+0x27>TranADJ fail (27)/(0C.07)>Tran interface failed
+0x2A>Get LastTimeBad fail (2A)>Buffer offset is overflow, maybe InfoBlock information error
+0x2B>Get RunTimeBad fail (2B.01)>TotalRunTimeBad Count is Zero
+0x2B>Get RunTimeBad fail (2B.02)>TotalRunTimeBad Count is too large
+0x2B>Get RunTimeBad fail (2B.03)>Fblock index is overflow range
+0x2D>Get LastTimeBad fail (2D)/(39.01)>InfoTotalBlkStatusAddr size wrong
+0x2D>Get LastTimeBad fail (2D)/(39.02)>InfoTotalBlkFinalAddr size wrong
+0x2E>Get RunTimeBad fail (2E)/(38.01)>Failed in PtestGetDumpRuntimeBadStatus
+0x2E>Get RunTimeBad fail (2E)/(38.02)>TotalRunTimeBadPtrCnt Overflow
+0x2E>Get RunTimeBad fail (2E)/(38.03)>BadInfoFBlkOffset Overflow
+0x2F>Shallow Erase check fail (2F)/(3D.01)>Vendor command flow fail
+0x2F>Mixed Shallow Erase (2F)/(3D.02)>Sample mixed fail
+0x2F>Shallow Erase check fail (2F)/(3D.03)>Parameter page read fail and Sample not mixed
+0x2F>Mixed Shallow Erase (2F)/(3D.03)>Parameter page read fail and Sample mixed
+0x30>Scan OriginalBad fail (30)/(30.01)>Nand flash timeout when read cmd
+0x30>Scan OriginalBad fail (30)/(30.02)>Block address is overflow
+0x30>Scan OriginalBad fail (30)/(30.03)>Block address is error
+0x30>Scan OriginalBad fail (30)/(30.04)>Maybe the SRAM problem, please check TSB SRAM!!
+0x30>Scan OriginalBad fail (30)/(30.05)>ScanBad Mode setting wrong
+0x32>Sort EraseBad fail (32)/(32.01)>Nand flash timeout when erase cmd
+0x32>Sort EraseBad fail (32)/(32.02)>Block address is overflow
+0x32>Sort EraseBad fail (32)/(32.03)>Block address is error
+0x32>Sort EraseBad fail (32)/(32.04)>Maybe the SRAM problem, please check TSB SRAM!!
+0x32>Sort EraseBad fail (32)/(32.05)>Vendor command flow fail when write backup OrgBad info
+0x32>Sort EraseBad fail (32)/(32.06)>Write Last SLC Map to SRAM Error
+0x34>Program dummy fail (34)/(31.01)>Nand flash timeout when program dummy cmd
+0x34>Program dummy fail (34)/(31.02)>Block address is overflow
+0x34>Program dummy fail (34)/(31.03)>Block address is error
+0x34>Program dummy fail (34)/(31.04)>Maybe the SRAM problem, please check TSB SRAM!!
+0x34>Program dummy fail (34)/(31.05)>Vendor command flow fail whe write backup OrgBad info
+0x34>Program dummy fail (34)/(31.06)>Write Last SLC Map to SRAM Error
+0x40>Set System & Boundary Block fail (40)/(23.01)>System Block Over Rang
+0x40>Set System & Boundary Block fail (40)/(23.02)>First Block is different
+0x40>Set System & Boundary Block fail (40)/(23.03)>Can't find enough good block to assign system block
+0x41>Generate DiffAddr Table fail (41)/(0F.01)>Build SLC DiffAddr Table Fail
+0x41>Generate DiffAddr Table fail (41)/(0F.02)>Build TLC DiffAddr Table Fail
+0x41>Generate DiffAddr Table fail (41)/(0F.03)>Pick Not Match Fail
+0x41>Generate DiffAddr Table fail (41)/(0F.04)>LaterBadCnt Calculate Fail
+0x41>Generate DiffAddr Table fail (41)/(0F.05)>Last SLC Block in the TLC range
+0x41>Generate DiffAddr Table fail (41)/(0F.06)>First TLC Block in the SLC range
+0x41>Generate DiffAddr Table fail (41)/(0F.07)>Extend 8K Diff Table Over Boundary
+0x41>Generate DiffAddr Table fail (41)/(0F.09)>Find overlap diff address
+0x41>Generate DiffAddr Table fail (41)/(0F.0A)>Physical block address exceed total super block address
+0x42>Set Disk Capacity fail (42)/(0D.01)>Manual Capacity Exceed Fail
+0x42>Set Disk Capacity fail (42)/(0D.15)>SLC Block is not enough
+0x42>Set Disk Capacity fail (42)/(0D.16)>Too much bad block !!
+0x43>Calculate Info Block length fail (43)/(10.19)>Get Total Plane of BootISP Fail
+0x43>Calculate Info Block length fail (43)/(10.20)>Get Total Plane of Seed Table Fail
+0x43>Calculate Info Block length fail (43)/(10.21)>Get Total Plane of Parameter Table Fail
+0x43>Calculate Info Block length fail (43)/(10.22)>Get Total Plane of BadBlockStatus Table Fail
+0x43>Calculate Info Block length fail (43)/(10.23)>Get Total Plane of BadBlockBitMap Table Fail
+0x43>Calculate Info Block length fail (43)/(10.24)>Get Total Plane of DiffType2Bit Table Fail
+0x43>Calculate Info Block length fail (43)/(10.25)>Get Total Plane of TotalDiffAddr Table Fail
+0x4A>Generate InfoBlk fail (4A)>Dll report info block length is zero
+0x4B>Generate InfoBlk fail (4B)>Allocate memory fail when generate Info block procedure
+0x4C>Generate InfoBlk fail (4C)/(10.19)>Get Total Plane of BootISP Fail
+0x4C>Generate InfoBlk fail (4C)/(10.20)>Get Total Plane of Seed Table Fail
+0x4C>Generate InfoBlk fail (4C)/(10.21)>Get Total Plane of Parameter Table Fail
+0x4C>Generate InfoBlk fail (4C)/(10.22)>Get Total Plane of BadBlockStatus Table Fail
+0x4C>Generate InfoBlk fail (4C)/(10.23)>Get Total Plane of BadBlockBitMap Table Fail
+0x4C>Generate InfoBlk fail (4C)/(10.24)>Get Total Plane of DiffType2Bit Table Fail
+0x4C>Generate InfoBlk fail (4C)/(10.25)>Get Total Plane of TotalDiffAddr Table Fail
+0x4D>Generate InfoBlk fail (4D)/(11.26)>Parameter Table didn't exist 
+0x4E>Generate InfoBlk fail (4E)/(24.01)>Vendor command flow fail when Erase Info block
+0x4E>Generate InfoBlk fail (4E)/(24.02)>Vendor command flow fail when Program Info block
+0x4E>Generate InfoBlk fail (4E)/(24.03)>Vendor command flow fail when Erase Index block
+0x4E>Generate InfoBlk fail (4E)/(24.04)>Vendor command flow fail when Program Index block
+0x4F>Verify InfoBlk fail (4F)/(24.05)>Calculated checksum is not the same with the one read from nand flash
+0x4F>Verify InfoBlk fail (4F)/(24.06)>UNC occurs when reading Info block
+0x4F>Verify InfoBlk fail (4F)/(24.07)>Vendor command flow fail when read Info block
+0x50>Erase System block fail (50)>Can't translate physical system block index
+0x51>Erase System block fail (51)>Vendor command flow fail when Erase system block
+0x60>Download ISP fail (60)>Allocate memory fail when download ISP procedure
+0x61>Download ISP fail (61)/(25.01)>Vendor command flow fail when Erase ISP block
+0x61>Download ISP fail (61)/(25.02)>Vendor command flow fail when Program ISP block
+0x61>Download ISP fail (61)/(25.03)>Calculate checksum procedure occur error
+0x62>Verify ISP fail (62)/(22.01)>Calculated checksum is not the same with the one read from nand flash
+0x62>Verify ISP fail (62)/(22.02)>UNC occurs when reading ISP block
+0x62>Verify ISP fail (62)/(22.03)>Vendor command flow fail when check ISP checksum
+0x63>Verify ISP fail (63.01)>Vendor command flow fail when write parameter table to SRAM
+0x63>Verify ISP fail (63)/(13.01)>Load Parameter table fail
+0x63>Verify ISP fail (63)/(13.02)>Vendor command flow fail when read flash page
+0x63>Verify ISP fail (63)/(13.03)>Dump all Info Block fail
+0x63>Verify ISP fail (63)/(13.04)>Dump all ISP Block fail
+0x63>Verify ISP fail (63)/(13.05)>Dump BadInfo Block occur ECC fail
+0x63>Verify ISP fail (63.02)>ISP Content is mismatch
+0x6A>Download MPInfo fail (6A)/(21.01)>Vendor command flow fail when Erase MPinfo block
+0x6A>Download MPInfo fail (6A)/(21.02)>Vendor command flow fail when Program MPinfo block
+0x70>Reset Drive fail (70)/(04.04)>Vendor command flow fail when Reset CPU
+0x7A>Check ISP Mode fail (7A)>Vendor command flow fail
+0x7B>Not ISP Mode (7B)>Not ISP Mode after CPU Reset
+0x80>Read Drive Info fail (80)/(0B.01)>Vendor command flow fail when Read Drive Information
+0x81>Get Firmware Version fail (81)>Vendor command flow fail when Read ID Table
+0xA0>Read RDT Result fail (A0)>Allocate memory fail when get RDT Result procedure
+0xA1>Read RDT Result fail (A1)/(35.01)>Seed Table error
+0xA1>Read RDT Result fail (A1)/(35.02)>Can't find RDT block
+0xA1>Read RDT Result fail (A1)/(35.03)>Vendor command flow fail when Read RDT Result fail
+0xA1>Read RDT Result fail (A1)/(35.04)>Read RAM fail, Step1
+0xA1>Read RDT Result fail (A1)/(35.05)>Read RAM fail, Step2
+0xA1>Read RDT Result fail (A1)/(35.06)>Read RAM fail, Step3
+0xA1>Read RDT Result fail (A1)/(35.07)>Read RAM fail, Step4
+0xA1>Read RDT Result fail (A1)/(35.08)>RDT Result is Not Trusted
+0xA2>RDT Result is not exist (A2)>Can't find "RDT@" string from RDT Result buffer
+0xA3>RDT is unfinished (A3)>RDT_PASS flag is Zero
+0xA4>RDT Result is FAIL (A4)>RDT_ErrorCode is not Zero
+0xA6>Pre-Check Capacity fail (A6)/(0F.01)>Build SLC DiffAddr Table Fail
+0xA6>Pre-Check Capacity fail (A6)/(0F.02)>Build TLC DiffAddr Table Fail
+0xA6>Pre-Check Capacity fail (A6)/(0F.03)>Pick Not Match Fail
+0xA6>Pre-Check Capacity fail (A6)/(0F.04)>LaterBadCnt Calculate Fail
+0xA6>Pre-Check Capacity fail (A6)/(0F.05)>Last SLC Block in the TLC range
+0xA6>Pre-Check Capacity fail (A6)/(0F.06)>First TLC Block in the SLC range
+0xA6>Pre-Check Capacity fail (A6)/(0F.07)>Extend 8K Diff Table Over Boundary
+0xA6>Pre-Check Capacity fail (A6)/(0D.01)>Manual Capacity Exceed Fail
+0xA6>Pre-Check Capacity fail (A6)/(0D.15)>SLC Block is not enough
+0xA6>Pre-Check Capacity fail (A6)/(0D.16)>Too much bad block !!
+0xB0>Copy Test fail (B0)>Not ISP Mode before DoCopyCompare procedure
+0xB1>Copy Test fail (B1)>Allocate memory fail at CopyCompare procedure
+0xB2>Copy Test fail (B2)>Can't allocate memory to dump customize pattern at CopyCompare procedure
+0xB3>Copy Test fail (B3)>Read customize file fail at CopyCompare procedure
+0xB4>Copy Test fail (B4)>Can't allocate memory to generate random pattern at CopyCompare procedure
+0xB5>Copy Test (write) fail (B5)>Write command fail at CopyCompare procedure
+0xB6>Copy Test (read) fail (B6)>Read command fail at CopyCompare procedure
+0xB7>Copy Test (compare) fail (B7)>Compare data fail at CopyCompare procedure
+0xB8>Copy Test (clean) fail (B8)>Clean data fail at CopyCompare procedure
+0xC0>[QC]: It's not ISP Mode(C0)>Not ISP Mode before QC procedure
+0xC1>[QC]: Read IDTable/MPInfo fail(C1)>Vendor Command flow fail at ReadIDandMPInfo
+0xC2>[QC]: MPInfo mismatch, See Log file(C2)>MPInfo(SN+ModelName+WWN8) mismatch user setting
+0xC3>[QC]: Verify Size fail(C3)>DiskSize mismatch user setting
+0xC4>[QC]: FW version mismatch(C4)>FW Version mismatch user setting
+0xC5>[QC]: Vendor Specific mismatch(C5)>Vendor Specific mismatch user setting
+0xC6>[QC]: WWN mismatch(C6)>WWN16 mismatch user setting
+0xC7>[QC]: Read CID fail(C7)>Vendor Command flow fail at ReadCID
+0xC8>[QC]: CID mismatch, See Log file(C8)>CID content mismatch MPTool input data
+0xE0>MPISP can't support Intel grade check (E0)>MPISP didn't support Intel Grade check function
+0xE1>Special Grade (E1)>Find Special Intel Grade, Ex. (Chx,CeX=0x00)
+0xF0>Can't find any system block at ISP Mode (F0)>SWPtest.dll dump nothing  at ISP Mode
+0xF1>B0kb Sorting function fail (F1)/(3F.01)>Vendor command flow fail when program block
+0xF2>Mixed different B0kb Program flash (F2)>Mixed 2-8 and 4-8 program flash on the device
+0xF3>Wrong package. This is 2-8/4-8 program B0kb flash (F3)>Use wrong package to initial card
+0xF5>Change ID command fail (F5)>Vendor command flow fail
+0xF7>Read Retry Table function fail (F7)/(40.01)>Vendor command flow fail when get new retry table
+0xF7>Read Retry Table function fail (F7)/(40.02)>Not exist Retry Table

@@ -1,0 +1,78 @@
+[Version]
+Signature = "$CHICAGO$"
+Provider = %ProviderName%
+DriverVer = 06/01/2016,1.0.0.1
+Class = %DeviceClassName%
+ClassGUID = {3E86938E-21A0-4995-A283-CDDE469F6EA2}
+CatalogFile = PciCheck.cat
+
+[Class_Addreg]
+
+[Manufacturer]
+%MfgName% = DeviceVendor, NTx86, NTamd64
+
+[SourceDisksNames]
+1 = %DiskDesc%,,,""
+
+[DestinationDirs]
+DefaultDestDir  = 12 ; system32\drivers
+
+
+[Drv_AddService]
+DisplayName    = %DspName%
+ServiceType    = %SERVICE_KERNEL_DRIVER%
+StartType      = %SERVICE_DEMAND_START%
+ErrorControl   = %SERVICE_ERROR_NORMAL%
+ServiceBinary  = %12%\PciCheck.sys
+
+[ClassInstall32.NTx86]
+Addreg=Class_AddReg
+
+[Class_AddReg.NTx86]
+HKR,,,,%DeviceClassName%
+HKR,,Icon,,"-5"
+
+[SourceDisksFiles.x86]
+PciCheck.sys = 1,,,
+
+[DeviceVendor.NTx86]
+%DeviceDesc% = DefaultInstall, PCI\VEN_9999&DEV_9999
+
+[DefaultInstall.NTx86]
+CopyFiles = @PciCheck.sys
+
+[DefaultInstall.NTx86.Services]
+AddService = PciCheck, %SPSVCINST_ASSOCSERVICE%, Drv_AddService
+
+[ClassInstall32.NTamd64]
+Addreg=Class_AddReg
+
+[Class_AddReg.NTamd64]
+HKR,,,,%DeviceClassName%
+HKR,,Icon,,"-5"
+
+[SourceDisksFiles.amd64]
+PciCheck.sys = 1,,,
+
+[DeviceVendor.NTamd64]
+%DeviceDesc% = DefaultInstall, PCI\VEN_9999&DEV_9999
+
+[DefaultInstall.NTamd64]
+CopyFiles = @PciCheck.sys
+
+[DefaultInstall.NTamd64.Services]
+AddService = PciCheck, %SPSVCINST_ASSOCSERVICE%, Drv_AddService
+
+[Strings]
+MfgName = "Siliconmotion Technology Corp."
+ProviderName = "Siliconmotion Technology Corp."
+DiskDesc = "PciChecker Installation Disk"
+DeviceClassName = "PCI Viewer"
+#DeviceDesc = "PCI Viewer"
+DeviceDesc = "PCI Viewer for SM2260"
+DspName = "PciChecker"
+
+SPSVCINST_ASSOCSERVICE = 0x00000002
+SERVICE_KERNEL_DRIVER  = 1
+SERVICE_DEMAND_START   = 3
+SERVICE_ERROR_NORMAL   = 1
